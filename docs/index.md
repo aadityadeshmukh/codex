@@ -1,17 +1,67 @@
-# Welcome to MkDocs
+---
+hide:
+    - navigation
+    - toc
+    - path
+---
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
+# Home
 
-## Commands
+### Welcome to Codex!
 
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
+This site is a mix of multiple concepts. It serves as my personal digital garden, portfolio and a blog.
+It will be a home to a host of information on a variety of topics.
 
-## Project layout
+- 👉 If you like the content shared here please give me a shoutout on your social media platforms.
+- 👉 Follow me on twitter for more updates
 
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+To start exploring just pick a topic that interests you from below:
+
+---
+#### The high levels topics are:
+
+!!! info inline ""
+    ![](https://placehold.co/400x600)
+    ---
+    #### Coding
+
+!!! info inline ""
+    ![](https://placehold.co/400x600)
+    ---
+    #### DevOps
+
+!!! info inline ""
+    ![](https://placehold.co/400x600)
+    ---
+    #### User Experience
+
+!!! info inline ""
+    ![](https://placehold.co/400x600)
+    ---
+    #### Technologies
+
+!!! info inline ""
+    ![](https://placehold.co/400x600)
+    ---
+    #### Agile Methodologies
+
+!!! info inline ""
+    ![](https://placehold.co/400x600)
+    ---
+    #### Management
+
+!!! info inline ""
+    ![](https://placehold.co/400x600)
+    ---
+    #### Tools & Techniques
+
+!!! info inline ""
+    ![](https://placehold.co/400x600)
+    ---
+    #### Miscellaneous
+
+
+
+
+
+
