@@ -70,4 +70,9 @@ markdown_extensions:
       alternate_style: true
   - pymdownx.tasklist:
       custom_checkbox: true
-
+nav:
+  - Home: 'index.md'
+  - Management: 
+    - Management: 'Management/index.md'
+    - PMBOK: 'Management/pmbok.md'
+  - Portfolio: 'resume.md'
