@@ -41,7 +41,6 @@ theme:
     - content.code.copy
   plugins:
     - search
-    - termynal
 copyright: Made with ❤ by Aditya Deshmukh
 extra:
   generator: false
@@ -74,11 +73,6 @@ markdown_extensions:
       alternate_style: true
   - pymdownx.tasklist:
       custom_checkbox: true
-  - termynal:
-      title: bash
-      buttons: macos
-      prompt_literal_start:
-        - "$"
 nav:
   - Home: 'index.md'
   - Management: 
