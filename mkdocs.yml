@@ -38,8 +38,10 @@ theme:
     - search.highlight
     - search.share
     - navigation.footer
+    - content.code.copy
   plugins:
     - search
+    - termynal
 copyright: Made with ❤ by Aditya Deshmukh
 extra:
   generator: false
@@ -62,6 +64,8 @@ markdown_extensions:
   - pymdownx.details
   - pymdownx.highlight:
       anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
   - pymdownx.superfences
   - pymdownx.inlinehilite
   - pymdownx.smartsymbols
@@ -70,9 +74,19 @@ markdown_extensions:
       alternate_style: true
   - pymdownx.tasklist:
       custom_checkbox: true
+  - termynal:
+      title: bash
+      buttons: macos
+      prompt_literal_start:
+        - "$"
 nav:
   - Home: 'index.md'
   - Management: 
     - Management: 'Management/index.md'
     - PMBOK: 'Management/pmbok.md'
+  - 'Agile Methodologies':
+    - 'Agile Methodologies': 'Agile/index.md'
+  - 'DevOps':
+    - 'DevOps': 'DevOps/index.md'
+    - 'Example Project': 'DevOps/devops-project.md'
   - Portfolio: 'resume.md'
