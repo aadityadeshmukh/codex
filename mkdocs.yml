@@ -80,7 +80,13 @@ nav:
     - PMBOK: 'Management/pmbok.md'
   - 'Agile Methodologies':
     - 'Agile Methodologies': 'Agile/index.md'
+  - 'Development':
+    - 'Development': 'Development/index.md'
+    - 'PostgreSQL': 'Development/postgre.md'
   - 'DevOps':
     - 'DevOps': 'DevOps/index.md'
     - 'Example Project': 'DevOps/devops-project.md'
+  - 'Technologies':
+    - 'Technologies': 'Technologies/index.md'
+    - 'AWS': 'Technologies/aws.md'
   - Portfolio: 'resume.md'

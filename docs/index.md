@@ -23,10 +23,10 @@ To start exploring just pick a topic that interests you from below:
 !!! info inline ""
     ![](https://placehold.co/500x360)
     ---
-    ### Coding
+    ### Development
     *All things related to software development* 
     
-    [Explore ↗](Management/index.md)
+    [Explore ↗](Development/index.md)
 
 !!! info inline ""
     ![](https://placehold.co/500x360)

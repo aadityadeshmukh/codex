@@ -28,7 +28,7 @@ Standard for Project Management
 ### Value Delivery Systems
 
 #### Creating Value
-??? info "More"
+??? info 
     - **Projects create value for organizations by:**
         - creating a product, service or desired result for end customers
         - societal or environmental positive change
@@ -52,7 +52,7 @@ Standard for Project Management
         ![A typical information flow](../assets/images/management/information-flow.png)
 
 #### Organizational Governance Systems
-??? info "More"
+??? info 
     - Governance systems work along side value delivery systems
     - They enable smooth workflow, resolve issues and support decision making
     - they provide a framework with functions and processes that guide activities
@@ -60,7 +60,7 @@ Standard for Project Management
     - provide structure to assess changes, risks and issues
 
 #### Functions of a project
-??? info "More"
+??? info 
     - **Introduction:**
         - People drive project delivery
         - Two main modes of co-ordiation: Centralized (central authority) and decentralized (self-managed)
@@ -94,7 +94,7 @@ Standard for Project Management
             - monitor progress
 
 #### The Project Environment
-??? info "More"
+??? info 
     - **Internal:**
         - Process assets
         - Governance docs
@@ -118,7 +118,7 @@ Standard for Project Management
         - Physical considerations
 
 #### Product Management considerations
-??? info "More"
+??? info 
     - Product Management involves integrating data, processes, people and business systems to create, maintain & develop a product or service throughout its lifecycle.
     - Forms:
         - Program management within a product lifecycle
@@ -129,3 +129,72 @@ Standard for Project Management
 
 ### Project Management principles
 
+- The principles are not prescriptive
+- They are broad based to allow multiple individuals and orgs can align to them
+- They are internally consistent (one principle does not negate the other)
+
+#### Stewardship
+??? info
+    - It means taking care, responsible use of resources and upholding values and ethics
+    - Two main considerations:
+        - Internal:
+            - Operating in alignment with orgs values
+            - Commitment towards and respectful engagement of team mates
+            - Responsible use of orgs resources like finance
+            - Appropriate use of authority, accountability and responsibility
+        - External:
+            - Environment Sustainability
+            - Orgs relationship with external stakeholders
+            - Societal impact
+            - Imapct on the industry practices
+    - Stewards have both implicit and explicit duties that may include:
+        - Compliance
+        - Integrity
+        - Care
+        - Trustworthiness
+
+#### Collaboration
+??? info
+    - Collaboration includes multiple contributing factors like:
+        - Agreements
+            - these are behavioural patterns and working norms
+            - they need to be established at the start of the project
+            - evolved further to ensure collective working continues
+        - Organizational structures
+            - Structures that can improve collaboration include:
+                - Definitions of roles and responsibilities
+                - Allocation of employees and vendors into project teams
+                - formal committees tasked with specific objectives
+                - Stand up meetings to review topics
+        - Processes
+            - set of rules that enable completion of tasks and assignments
+            - these may include a work breakdown structure, taskboard or backlog
+    - By fostering inclusive and collaborative environments, knowledge and expertise are more freely exchanged, which in turn enable better project outcomes.
+    - Clearly defined roles can improve project outcomes significantly
+    - To clearly define roles the following need to be considered:
+        - Authority: Taking decisions
+        - Accountability: Owning outcomes
+        - Responsibility: obligation for fulfilment
+    - A collaborative project team takes collective ownership of all outcomes
+
+#### Engage with stakeholders
+??? info
+    - Stakeholders are parties that affect, are affected by or percieve to be affected by a decision or deliverable of a program, project or portfolio
+    - They influence the project, its performance or outcome (both positive or negative)
+    - They affect:
+        - Scope / Requirements
+        - Schedule
+        - Cost
+        - Plans
+        - Project team
+        - Outcomes
+        - Benefits realization
+        - Risk
+        - Quality
+        - Sucess
+        - Culture
+    - Stakeholders will have a varying degree of interest \ influence in the project
+    - The engagement level, methodology should be determined based on these factors
+    - For example low interest, low influence stakeholders should be engaged in a monitoring capacity and the written communication must be used
+
+#### Focus on Value

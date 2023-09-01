@@ -72,6 +72,7 @@ They face some issues and they want to fix them with DevOps. Analyse the problem
     ```
 
 - Bring the services up with the `docker-compose up` command
+- This will bring the site up on `localhost:80`
 - Check all the services currently running using the `docker-compose ps` command
 - Bring the services down with the `docker-compose down` command
 
