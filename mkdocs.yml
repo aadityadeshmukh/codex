@@ -61,6 +61,9 @@ markdown_extensions:
   - pymdownx.mark
   - pymdownx.tilde
   - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
   - pymdownx.highlight:
       anchor_linenums: true
       line_spans: __span
@@ -88,5 +91,4 @@ nav:
     - 'Example Project': 'DevOps/devops-project.md'
   - 'Technologies':
     - 'Technologies': 'Technologies/index.md'
-    - 'AWS': 'Technologies/aws.md'
   - Portfolio: 'resume.md'

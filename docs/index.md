@@ -21,7 +21,7 @@ To start exploring just pick a topic that interests you from below:
 #### The high levels topics are:
 
 !!! info inline ""
-    ![](https://placehold.co/500x360)
+    ![](./assets/images/dev.png)
     ---
     ### Development
     *All things related to software development* 

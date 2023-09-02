@@ -76,4 +76,55 @@ They face some issues and they want to fix them with DevOps. Analyse the problem
 - Check all the services currently running using the `docker-compose ps` command
 - Bring the services down with the `docker-compose down` command
 
+### Unit testing Setup
+
+- In addition to the `website` service we need to setup a unit-tests service in docker compose yml
+- It will run use capybara for authoring test cases and selenium web drivers for invoking a real browser
+- The tests will be written in a declarative ruby rspec framework
+
+#### Setting up and running a basic test
+- Testcase:
+    ``` rb
+    require 'capybara'
+    require 'capybara/dsl'
+
+    describe "Example website render unit tests" do
+        it "should show logo on the landing page" do
+        end
+    end
+    ```
+- Dockerfile to install ruby, capybara and selenium:
+    ``` dockerfile
+    FROM ruby:alpine
+
+    RUN apk add build-base ruby-nokogiri
+    RUN gem install rspec capybara selenium-webdriver
+
+    ENTRYPOINT [ "rspec" ]
+    ```
+- Complete docker-compose yml file:
+    ``` yml
+    version: '3.7'
+    services:
+    website:
+    build:
+        context: .
+    ports:
+        - 80:80
+    unit-tests:
+        build:
+        dockerfile: rspec.dockerfile
+        context: .
+        volumes:
+        - $PWD:/app
+        command:
+        - --pattern
+        - /app/spec/unit/*_spec.rb
+    ```
+- To run the unit tests first invoke the `website` service using `docker-compose up -d website`
+- Then run the `unit-tests` service `docker-compose run --rm unit-tests`
+
+
+
+
 ## Demo
