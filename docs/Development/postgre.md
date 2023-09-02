@@ -1,6 +1,6 @@
-# PostgreSQL
+# PostgreSQL Quick Start
 
-??? note "Installation"
+??? info "Installation"
     Two ways to install:
 
     - OS specific installer
@@ -11,7 +11,7 @@
         docker run --name postgre-server -e POSTGRES_PASSWORD=admin -p 5430:5432 -d postgres:latest
         ```
 
-??? note "User Interfaces"
+??? info "User Interfaces"
     ==PSQL Shell==
 
     PSQL shell is a command line interface to work with the Postgre databases.
@@ -41,7 +41,7 @@
     - To quickly get all rows: From table right click menu select "View/Edit Data-> All rows"
     - To connect the PG Admin to postgres on docker just enter the login details and server details
 
-??? note "Relational Databases"
+??? info "Relational Databases"
 
     Database table structure:
 
@@ -71,6 +71,7 @@
     We will build the organizational structure in PostgreSQL using all of its main features.
 
     ==Step 1: Create Database==
+    
     In pgAdmin right click on databases->Create->database.
     This in turn will run the following command in the background:
     ```SQL
@@ -83,10 +84,12 @@
     ```
 
     ==Step 2: Schemas==
-    Schemas are more like the departments of an organization. It can be used to group together table logically.
-    PostgreSQL has a default public schema under which all tables go if no other schema is created.
+    
+    - Schemas are more like the departments of an organization. 
+    - It can be used to group together table logically.
+    - PostgreSQL has a default public schema under which all tables go if no other schema is created.
     - To create a schema just: `Choose create ->Schema` from the right click menu of schemas or databases.
-    This will run the following command:
+    - This will run the following command:
     ```SQL
         CREATE SCHEMA manufacturing
         AUTHORIZATION postgres;
@@ -94,21 +97,20 @@
     - Create 2 schemas *manufacturing* and *human_resources*
 
     ==Step 3: Tables==
-    For now we will add 2 tables to the manufacturing schema called *products* and *categories* with the following columns:
+    
+    - For now we will add 2 tables to the manufacturing schema called *products* and *categories* with the following columns:
 
-    products:
+    - products:
+        - product_id (primary_key)
+        - name
+        - power
+        - manufacturing_cost
+        - category_id
 
-    - product_id (primary_key)
-    - name
-    - power
-    - manufacturing_cost
-    - category_id
-
-    categories:
-
-    - category_id
-    - name
-    - market
+    - categories:
+        - category_id
+        - name
+        - market
 
     ```SQL
     CREATE TABLE manufacturing.products
@@ -126,11 +128,12 @@
     ```
     
     ==Step 4: Link tables with Foreign Keys==
-    In order to add link two tables we need to add a foreign key constraint to the table where the foreign key will be referenced.
-    For example in our case the the products table will reference the category id so we will apply the foreign key constraint to the product table.
+    
+    - In order to add link two tables we need to add a foreign key constraint to the table where the foreign key will be referenced.
+    - For example in our case the the products table will reference the category id so we will apply the foreign key constraint to the product table.
 
-    Using pgAdmin we can apply the Foreign Key constraint by going to table properties -> constraints ->foreign key
-    Here specify the tables and columns. Choose validated button and select cascade when updated.
+    - Using pgAdmin we can apply the Foreign Key constraint by going to table properties -> constraints ->foreign key
+    - Here specify the tables and columns. Choose validated button and select cascade when updated.
 
     The sample SQL is as follows:
     ```SQL
@@ -141,4 +144,103 @@
         REFERENCES manufacturing.categories (category_id) MATCH SIMPLE
         ON UPDATE CASCADE
         ON DELETE NO ACTION;
+    ```
+
+    ==Step 5: Add data to tables with CSV==
+
+??? info "Querying Data"
+
+    - Basic clauses:
+        - SELECT : Allows to specify the columns needed to be query. If all needed use * as a shortcut
+        - FROM : Allows to specify the schema.table from where the query needs to be done
+        - WHERE : Allows to fetch only those rows which meet a criteria
+
+        ```SQL
+        SELECT *
+        FROM manufacturing.products;
+        ```
+
+        ```SQL
+        SELECT name, manufacturing_cost
+        FROM manufacturing.products;
+        WHERE product_id = 'KE9W';
+        ```
+    
+    - Joining two tables to query data:
+        - SELECT: Use tablename.columnName comma separated values and use alias clause (AS) to specify ambiguous values
+        - FROM: Use `schemaName.tableName JOIN schemaName.tableName`
+        - ON: Use to specify the categories on which joins will happen
+        - WHERE: Filter the data
+    
+        ```SQL
+        SELECT products.product_id,
+            products.name AS product_name,
+            products.manufacturing_cost,
+            products.category_id,
+            categories.name AS category_name,
+            categories.market
+        FROM manufacturing.products JOIN manufacturing.categories
+        ON products.category_id = categories.category_id
+        WHERE categories.name = 'batteries';
+        ```
+    
+    - Creating a view to easily query joined data:
+        - In case the joined data needs to be queried multiple times then views can be created.
+        - Process is to write the query and add the following syntax before it: `CREATE VIEW tableName.viewName AS`
+        - A view will be created which can be used a separate table
+        - A view acts like a table but does not duplicate data
+
+    ```SQL
+    CREATE VIEW manufacturing.product_details AS
+    SELECT products.product_id,
+        products.name AS product_name,
+        products.manufacturing_cost,
+        products.category_id,
+        categories.name AS category_name,
+        categories.market
+    FROM manufacturing.products JOIN manufacturing.categories
+    ON products.category_id = categories.category_id;
+    ```
+
+??? info "Indexing & constraining data"
+    - Index is a typical like a collection of keywords you find at the end of a text book to quickly find concepts.
+    - You can use it to find information frequently needed by creating an index on a table.
+    - To create an index open the table needed and from the right click menu choose create
+    - There are a few options in the creation panel like Unique, Clustered etc.
+    
+    - Constraints are conditions we add to the database so that only the correct data is added
+    - Click on Constraints->Create and add a name and condition(s) to create a constraint
+
+??? danger "Administration"
+
+    - Postgre provides some administrative capabilitites. 
+    - We can use roles to provide unlimited or restricted access to the users.
+    - Some common syntax is mentioned below to:
+        - Set role
+        - Reset role
+        - Grant permissions
+        - Revoke role
+        - drop the role
+    
+    ```SQL
+    -- View tables from the KinetEco database
+    SELECT * FROM manufacturing.products;
+    SELECT * FROM human_resources.employees;
+
+    -- Impersonate the hr_manager
+    SET ROLE hr_manager;
+
+    -- Switch permissions back to posgres super user
+    RESET ROLE;
+
+    -- Give hr_manager permissions in database
+    GRANT USAGE ON SCHEMA human_resources TO hr_manager;
+    GRANT SELECT ON ALL TABLES IN SCHEMA human_resources TO hr_manager;
+    GRANT ALL ON ALL TABLES IN SCHEMA human_resources TO hr_manager;
+
+    -- Remove the hr_manager role from Postgres Server
+    RESET ROLE;
+    REVOKE ALL ON ALL TABLES IN SCHEMA human_resources FROM hr_manager;
+    REVOKE USAGE ON SCHEMA human_resources FROM hr_manager;
+    DROP ROLE hr_manager;
     ```
