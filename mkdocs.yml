@@ -86,6 +86,7 @@ nav:
   - 'Development':
     - 'Development': 'Development/index.md'
     - 'PostgreSQL': 'Development/postgre.md'
+    - 'Django': 'Development/django.md'
   - 'DevOps':
     - 'DevOps': 'DevOps/index.md'
     - 'Example Project': 'DevOps/devops-project.md'
