@@ -179,12 +179,12 @@
 
 ??? info "Building a front end"
 
-    Setting up static directory:
-
+    - Setting up static directory:
         - Create a directory called "static" on the root level
         - You need to tell Django that this will host the static files
         - The way to do it is the settings.py
         - The settings.py should have the following setup:
+        
             ```python
             STATIC_URL = 'static/'
 
