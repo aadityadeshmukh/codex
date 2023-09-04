@@ -79,17 +79,21 @@ markdown_extensions:
 nav:
   - Home: 'index.md'
   - Management: 
-    - Management: 'Management/index.md'
-    - PMBOK: 'Management/pmbok.md'
+    - 'Management': 'Management/index.md'
+    # - 'Project Management': 'Management/pmp-study.md'
+    # - 'PMBOK': 'Management/pmbok.md'
   - 'Agile Methodologies':
     - 'Agile Methodologies': 'Agile/index.md'
   - 'Development':
     - 'Development': 'Development/index.md'
-    - 'PostgreSQL': 'Development/postgre.md'
-    - 'Django': 'Development/django.md'
+    - 'Databases':
+      - 'PostgreSQL Quick Start': 'Development/postgre.md'
+    - 'Python':
+      - 'Django Quick Start': 'Development/django.md'
+      - 'Python database API': 'Development/python-database-api.md'
   - 'DevOps':
     - 'DevOps': 'DevOps/index.md'
     - 'Example Project': 'DevOps/devops-project.md'
   - 'Technologies':
     - 'Technologies': 'Technologies/index.md'
-  - Portfolio: 'resume.md'
+  - 'Portfolio': 'resume.md'

@@ -222,3 +222,47 @@
             </body>
             </html>
             ```
+        - External CSS also can be used like Bootstrap or Tailwind
+
+??? info "CRUD - remaining parts"
+
+    Until now we have dealt with the Read part of the CRUD operations.
+    We will not deal with the CREATE, UPDATE AND DELETE parts
+
+    CREATE:
+
+    - We will need to add a create end point
+    - Use the following code in views.py:
+    ```python
+    from django.views.generic import CreateView, DetailView, ListView
+    # Create your views here.
+
+    class NoteCreateView(CreateView):
+        model = Notes
+        fields = ['title', 'note']
+        success_url = '/smart/notes'
+    ```
+    - urls.py:
+    ```python
+    from django.urls import path
+    from . import views
+
+    urlpatterns = [
+        path('notes', views.NoteListView.as_view(), name='notes.list'),
+        path('notes/<int:pk>', views.NoteDetailView.as_view(), name='notes.detail'),
+        path('notes/new' , views.NoteCreateView.as_view(), name='notes.new')
+    ]
+    ```
+    - Template html:
+    ```html
+    <!-- notes_form.html -->
+    {% extends "base.html" %}
+
+    {%block content%}
+
+    <form action="{% url 'notes.new'%}" method="POST">{% csrf_token %}
+        {{form}}
+        <button type="submit" class="btn btn-primary my-5">Submit</button>
+    </form>
+    {%endblock%}
+    ```
