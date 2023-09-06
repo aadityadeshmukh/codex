@@ -93,7 +93,6 @@ nav:
       - 'Python database API': 'Development/python-database-api.md'
   - 'DevOps':
     - 'DevOps': 'DevOps/index.md'
-    - 'Example Project': 'DevOps/devops-project.md'
   - 'Technologies':
     - 'Technologies': 'Technologies/index.md'
   - 'Portfolio': 'resume.md'
