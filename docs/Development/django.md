@@ -400,4 +400,107 @@
 
     # Code after ---
     ```
-    - 
+    - Assigning a user to a new note:
+        - To do this add the following method to the createview class:
+        ```python
+            def form_valid(self, form):
+                self.object = form.save(commit=False)
+                self.object.user = self.request.user
+                self.object.save()
+                return HttpResponseRedirect(self.get_success_url())
+        ```
+        - This will essentially stop the form from being saved, fetch the object and add a user to it.
+
+??? info "Login/Logout/Signup"
+
+    - Login/Logout/Singups are really easy too.
+    - Home/Views.py:
+    ```python
+        from django.contrib.auth.views import LoginView, LogoutView
+        from django.views.generic.edit import CreateView
+        from django.contrib.auth.forms import UserCreationForm
+        from django.shortcuts import redirect
+
+        class SignupView(CreateView):
+            form_class = UserCreationForm
+            template_name = 'home/register.html'
+            success_url = '/smart/notes'
+
+            def get(self, request, *args, **kwargs):
+                if self.request.user.is_authenticated:
+                    return redirect('notes.list')
+                return super.get(request, *args, **kwargs)
+
+        class LogoutInterfaceView(LogoutView):
+            template_name = 'home/logout.html'
+
+        class LoginInterfaceView(LoginView):
+            template_name = 'home/login.html'
+    ```
+    - Home/Urls.py:
+    ```python
+        from django.urls import path
+        from . import views
+
+        urlpatterns = [
+            path('', views.HomeView.as_view(), name='home'),
+            path('login', views.LoginInterfaceView.as_view(), name='login'),
+            path('logout', views.LogoutInterfaceView.as_view(), name='logout'),
+            path('signup', views.SignupView.as_view(), name='signup'),
+        ]
+    ```
+    - Templates:
+    ```html
+    <!-- login -->
+    {%extends 'base.html'%}
+
+    {%block content%}
+    <form method="POST">{%csrf_token%}
+        {{form.as_p}}
+        <input type="submit" class="btn btn-secondary">
+    </form>
+    {%endblock%}
+
+    <!-- logout -->
+
+    {%extends 'base.html'%}
+
+    {%block content%}
+    <h1>Buh bye! 👋</h1>
+    {%endblock%}
+
+    <!-- register -->
+
+    {%extends 'base.html'%}
+
+    {%block content%}
+    <form method="POST" style="text-align: left; margin: 0 auto; width: 600px;">{%csrf_token%}
+        {{form.as_p}}
+        <input type="submit" class="btn btn-secondary" name="Submit">
+    </form>
+    {%endblock%}
+    ```
+
+??? info "Finishing touches"
+
+    - Add finishing touches by adding a navbar to the base.html
+    ```html
+     <nav class="navbar navbar-dark bg-dark">
+        <div class="ms-auto">
+            {%if user.is_authenticated%}
+            <a href="{% url 'home' %}" class="btn btn-outline-light me-1">Home</a>
+            <a href="{% url 'notes.list' %}" class="btn btn-outline-light me-1">Notes</a>
+            <a href="{% url 'notes.new' %}" class="btn btn-outline-light me-1">Create</a>
+            <a href="{% url 'logout' %}" class="btn btn-outline-light me-1">Logout</a>
+            {%else%}
+            <a href="{% url 'login' %}" class="btn btn-outline-light me-1">Login</a>
+            <a href="{% url 'signup' %}" class="btn btn-outline-light me-1">Signup</a>
+            {%endif%}
+        </div>
+    </nav>
+    ```
+
+??? example 
+    
+    - The full coded example (notes application) can be found on [this github repository](https://github.com/aadityadeshmukh/learning/tree/main/django-basics)
+    - To run this project just run `python manage.py runserver <port>`
