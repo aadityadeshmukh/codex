@@ -266,3 +266,138 @@
     </form>
     {%endblock%}
     ```
+    - Form validations are an important part and Django makes it easy to work with them
+    - Create a forms.py file in the app and add the code as illustrated below:
+    ```python
+    from django import forms
+    from django.core.exceptions import ValidationError
+
+    from .models import Notes
+
+    class NotesForm(forms.ModelForm):
+        class Meta:
+            model = Notes
+            fields = ('title', 'note')
+            widgets = {
+                'title': forms.TextInput(attrs={'class' : 'form-control my-5'}),
+                'note': forms.Textarea(attrs={'class' : 'form-control mb5'})
+            }
+            labels = {
+                'note': "What's on your mind?"
+            }
+        
+        def clean_title(self):
+            title = self.cleaned_data['title']
+            if 'Django' not in title:
+                raise ValidationError('Not a django related note')
+            return title
+    ```
+    - The above class needs to be simply included in the views.py in the create view section
+    - The above also adds ways to control UX elements like label and css injection using labels and widgets dictionary
+    ```python
+        class NoteCreateView(CreateView):
+        model = Notes
+        # fields = ['title', 'note']
+        success_url = '/smart/notes'
+        form_class = NotesForm
+    ```
+    - The form errors can be exluded by using css selectors and hiding them
+    - They can also be styled by adding the below code to the template:
+    ```python
+        {% if form.errors %}
+            <div class="alert alert-danger my-5">
+                {{form.errors.title.as_text}}
+            </div>
+        {%endif%}
+    ```
+
+    ==UPDATE==
+
+    - Updating is really easy as it is a natural extension of the create part.
+    - First add the UpdateView in views.py:
+        ```python
+        from django.views.generic import CreateView, DetailView, ListView, UpdateView
+        # Create your views here.
+
+        class NoteUpdateView(UpdateView):
+            model = Notes
+            # fields = ['title', 'note']
+            success_url = '/smart/notes'
+            form_class = NotesForm
+        ```
+    - Update the NoteUpdateView in urls.py which will add an edit end point
+        ```python
+        path('notes/<int:pk>/edit', views.NoteUpdateView.as_view(), name='notes.update'),
+        ```
+    - This will basically add the functionality update the fields.
+    - We can beautify it by adding relevant buttons to the templates
+    - For example and edit button on the detail page `<a href="{% url 'notes.update' pk=note.id %}" class="btn btn-secondary">Edit</a>`
+    - And cancel button on the edit page: `<a href="{% url 'notes.list' %}" class="btn btn-secondary">Cancel</a>`
+
+    ==DELETE==
+
+    - Deletion is quite similar to update.
+    - Create a DeleteView in views and include it in urls.py
+    ```python
+    from django.views.generic.edit import DeleteView
+    from .forms import NotesForm
+    # Create your views here.
+
+    class NoteDeleteView(DeleteView):
+        model=Notes
+        success_url = '/smart/notes'
+        template_name = 'notes/notes_delete.html'
+    ```
+    - Inclusion for urls.py
+    ```python
+    path('notes/<int:pk>/delete', views.NoteDeleteView.as_view(), name='notes.delete'),
+    ```
+    - Add a template to specify a confirmation message.
+    - Easy peasy.
+    ```html
+    {%extends "base.html" %}
+
+    {%block content%}
+    <form method="POST">{% csrf_token %}
+        <p>Are you sure you want to delete "{{notes.title}}"?</p>
+        <input type="submit" class="btn btn-danger" value="confirm">
+    </form>
+    {%endblock%}
+    ```
+
+??? info "User management"
+    - Django already has a user database with one user admin with pk=1
+    - We first need to create migrations and run them to associate all notes to the admin user
+    - This will also make the app user aware i.e. we should be able to show only those notes to users who created them
+    - First update the model:
+    ```python
+        from django.db import models
+        from django.contrib.auth.models import User
+
+        # Create your models here.
+        class Notes(models.Model):
+            title = models.CharField(max_length=200)
+            note = models.TextField()
+            created = models.DateTimeField(auto_now_add=True)
+            user = models.ForeignKey(User, on_delete=models.CASCADE, related_name="notes")
+    ```
+    - Once done create migrations using `python manage.py makemigrations`
+    - Then run the migration `python manage.py migrate`
+    - It will ask for a default user. Enter 1 i.e. pk for admin
+    - This will associate all existing notes with the admin user
+    - Next update the views that need logins for example the list view:
+    ```python
+    from django.contrib.auth.mixins import LoginRequiredMixin
+    # Code before ---
+    class NoteListView(LoginRequiredMixin, ListView):
+    model = Notes
+    context_object_name = "notes"
+    template_name = 'notes/smart_notes.html'
+    login_url = '/admin'
+
+    def get_queryset(self):
+        return self.request.user.notes.all()
+
+    # Code after ---
+    ```
+    - 

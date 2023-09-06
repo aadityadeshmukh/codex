@@ -183,6 +183,19 @@
         ON products.category_id = categories.category_id
         WHERE categories.name = 'batteries';
         ```
+    - Joining 3 tables:
+        - Joining 2 tables to 1 parent table where the 2 PKs are referenced as FKs
+        ```SQL
+        SELECT bookauthors.id as baid,
+            books.book_name,
+            books.page_num,
+            authors.author_name,
+            authors.author_surname
+        FROM bookauthors 
+        JOIN books ON bookauthors.book_id = books.book_id 
+        JOIN authors ON bookauthors.author_id = authors.author_id
+        WHERE authors.author_name='Alex' AND authors.author_surname='Cross'
+        ```
     
     - Creating a view to easily query joined data:
         - In case the joined data needs to be queried multiple times then views can be created.
