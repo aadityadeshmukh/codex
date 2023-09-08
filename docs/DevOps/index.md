@@ -14,3 +14,10 @@ hide:
 
     ---
     [Explore](devops-fundamentals.md)
+
+
+??? info "CI/CD"
+    Continuous Integration and Delivery means continuously building, testing, and delivering your code, you can reap huge stability, speed, and flexibility benefits.
+
+    ---
+    [Explore](ci-cd.md)

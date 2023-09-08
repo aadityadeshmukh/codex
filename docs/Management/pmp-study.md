@@ -130,6 +130,84 @@ Introduction
 Pre-project Initiation
 
 ??? info
+    What is a project?
+
+    - A project is temporary and unique. This is the best definition of what a project is.
+        - Imagine you need to build a website for a department for internal use
+        - They will be the key stakeholders and will have specific requirements, budget and timelines
+        - Once the website is built to spec it will be handed over to the department and they will confirm or suggest changes
+        - The project will close once handed over
+        - This is essentially the entire cycle of the project:
+            - Initiation
+            - Planning and execution
+            - Monitoring and control
+            - Formal closure
+        - Post closure if the website needs more features this will be a *fresh new project*
+    - Another important way to describe a project is *progressive elaboration*
+    - All projects create business value (tangible or non-tangible)
+        - Tangible:
+            - Stockholder value
+            - Market share
+            - Tools
+            - Other monetary assets
+        - Non Tangible:
+            - Brand recognition
+            - Trademarks
+            - Reputation
+            - Goodwill
+    - Most common reason a company would undertake a project are due to legal, social or regulatory requirements
+    - Specific factors that lead to project creation:
+        - New technology
+        - Competitive forces
+        - Material issues
+        - Political changes
+        - Market demand
+        - Economic changes
+        - Customer requests
+        - Stakeholder demands
+        - Legal requirement
+        - Business process improvements
+        - Strategic business opportunities or business need
+        - Social need
+        - Environmental considerations
+    
+    What is a program?
+        - A program is a set of related projects that are run in a co-ordinated way
+        - Orgs run programs because they have a set group of best practices or processes that can be utilized on all of them
+    
+    What is a portfolio?
+        - A portfolio is a set of unrelated programs and projects
+        - Project and Program management is interested in completing the projects the right way
+        - Portfolio management is about determining the right projects or programs to initiate based on business needs
+    
+    ??? tip
+    - Process group: Initiation
+    - Exam: Domain 3 - Business environment
+    - Key phrases:
+        - Temporary
+        - Unique
+        - Project
+        - Program
+        - Portfolio
+        - Operations
+
+    **What is project Management?**
+    - In general, it is the project manager's job to utilize a set of best practices, tools and techniques, excellent communication, and coordination of all the moving parts to bring the result to successful completion.
+    - Most best practices are related to cost, schedule and scope
+    - Types of project management:
+        - Predictive or waterfall project management
+            - The end result is known or predicted
+            - The expected outcome is known
+            - There is a formal change control
+            - Requirements dont change midway
+            - Solutions are formulated, communicated and approved before implementation
+            - Plans are created well in advance
+        - Adaptive or agile project management
+            - The outcome is not known
+            - Change is welcome
+            - Teams are only 1 to 4 weeks into the cycle
+            - No front loaded planning. Decisions are taken at the last responsible moment
+    
 
 Charters and stakeholders
 
