@@ -1,3 +1,7 @@
+---
+tags:
+    - python
+---
 # Python Database API
 
 **Introduction**

@@ -39,8 +39,14 @@ theme:
     - search.share
     - navigation.footer
     - content.code.copy
+  icon:
+    tag:
+      html: fontawesome/brands/html5
+      js: fontawesome/brands/js
+      css:  fontawesome/brands/css3
   plugins:
     - search
+    - tags
 copyright: Made with ❤ by Aditya Deshmukh
 extra:
   generator: false
@@ -49,6 +55,10 @@ extra:
       link: https://twitter.com/scr33nslaver
     - icon: fontawesome/solid/paper-plane
       link: mailto:aadityadeshmukh@duck.com
+  tags:
+    HTML5: html
+    JavaScript: js
+    CSS: css
 markdown_extensions:
   - abbr
   - admonition

@@ -1,3 +1,7 @@
+---
+tags:
+  - Project-management
+---
 # PMI - PMP Study guide
 
 ## Section 1 - Project Management & People
@@ -142,3 +146,5 @@ Creating and leading a team
 ## Section 2 - Project Management Processes
 
 ## Section 3 - Revision
+
+
