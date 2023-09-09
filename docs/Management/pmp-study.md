@@ -192,6 +192,7 @@ Pre-project Initiation
         - Operations
 
     **What is project Management?**
+
     - In general, it is the project manager's job to utilize a set of best practices, tools and techniques, excellent communication, and coordination of all the moving parts to bring the result to successful completion.
     - Most best practices are related to cost, schedule and scope
     - Types of project management:
@@ -207,7 +208,182 @@ Pre-project Initiation
             - Change is welcome
             - Teams are only 1 to 4 weeks into the cycle
             - No front loaded planning. Decisions are taken at the last responsible moment
-    
+    - Project Management lifecycles:
+        - There are a few types of project lifecycles that can be applied depending on the project:
+            - Predictive
+                - Scope, budget, schedules are decided early on
+            - Iterative
+                - Scope is decided early but schedule and budgets are modified later
+                - Develop the product in repeated cycles
+            - Incremental
+                - Deliverables are added in iterations within a timeframe
+            - Adaptive
+                - Detailed scope is defined and approved before the iteration
+                - Highly change driven
+            - Hybrid
+                - Combination of predictive or adaptive 
+    - Project phases:
+        - Each project will have a few phases
+        - Phases are a logical collection of activities that will produce a deliverable
+        - Phases may have these or more attributes:
+            - Name: Phase 1, 2 etc
+            - Number: Total phases
+            - Duration: Set or expected duration
+            - Resource requirements: Required resources people, equipment
+            - Entrance criteria
+            - Exit criteria
+        - Each phase will have gates which are basically ways to determine if one phase ends and other is supposed to start
+        - Its a way to decide how far we are in the lifecycle and what phase we are in
+        - It allows us to consider the preventive and corrective actions needed to be taken to reach the next phase
+    - Project Management data and information:
+        - *Work performance data*
+            - Raw data collected from members e.g. "How much time did you spend on it?"
+            - The project manager gets this information and plugs them in the PMIS
+        - *Work performance information*
+            - The data is used to compare with original plan which generates information like scope, schedule, costs
+            - If the numbers are outside the planned limits then adaptive actions can be taken
+            - Information can also be used to forecast performance
+        - *Work performace reports*
+            - The information collected is communicated to stakeholders
+    - Project Selection techniques:
+        -   Why companies undertake projects?:
+            - Market demand
+            - Customer request
+            - Business need or opportunity
+            - Technical advances
+            - Legal compliance
+            - Environment considerations
+            - Social need
+        - Businesses need to validate the reasons to undertake the project
+        - The project must fit into the organizations strategic plan
+        - Business case is the main driver for the pre-project initiation.
+        - Creating a business case:
+            - Business analysts are involved during pre-project initiation
+            - They analyse the data and consider multiple financial models to determine ROI
+            - However, this is predictive and mostly has holes in it
+            - We might have a better chance to come close to the numbers when the project is planned and understood
+            - Hence a project manager might be involved in the selection process
+            - Analysis:
+                - Used to narrow the gap between crunched and actual numbers
+                - Types:
+                    - Decision models
+                        - Cost-benefit analysis
+                        - Scoring models
+                        - Payback period
+                    - Economic models
+                        - Discounted Cash flow
+                            - Determining the future financial return worth
+                            - Process:
+                                - Find the payback period
+                                - Apply the discount rates and inflation
+                                - Assumed amount of money the organization will recieve overall
+                        - Net present value
+                            - Net gain or loss in each timeframe
+                            - NPV analysis is the process of taking expenditures, net gains, and net losses for each potential year in an attempt to determine whether the project will return enough net revenue to keep up with the cost of capital over time.
+                            - ==**Tip**: Always choose the highest NPV==
+                        - Internal Rate of Return
+                            - IRR allows to calculate return without any external factors like inflation or cost of capital
+                            - It considers time value of money
+                            - ==**Tip: Always consider projects with highest IRR==
+                        - ==**Tip**: Typically for exam the NPV is the key indicator of a profitable project==
+                    - Constrained optimization
+                        - These are mathematical models used to determine project viability or profitable
+                    - Expert judgement
+                        - Utilize opnions from experts and stakeholders to determine projects
+                        - Downside is groupthink which can be avoided by using the other models
+                    - Feasibility analysis
+                        - Using expert judgement to determine feasibility in addition to financial ROI
+                - Business case:
+                        - The business case is the very first document that will be created
+                        - It is comprehensive
+                        - It includes the executive summary first but is usually written last
+                        - The following header will also be included:
+                            - Issues that the project is addressing
+                            - The anticipated outcomes
+                            - Any recommendations from the selection committee
+                            - The business case analysis team
+                            - The problem definition and statement that describes why the project is under consideration
+                            - The organizational impact of the project
+                            - Technology implementations
+                            - Project overview and description
+                            - Goals and objectives
+                            - Expected project performance
+                            - Any assumptions or constraints
+                            - Major milestones
+                            - Strategic alignment
+                            - Cost-benefit analysis
+                            - Alternatives analysis
+                            - Approval signatures
+            - Stakeholders:
+                - key stakeholders:
+                    - Project management office (PMO)
+                        - Standardize the governance of projects accross the organization
+                        - Oversee resources, mehodologies, tools and techniques
+                        - Three types:
+                            - Supportive
+                            - Controlling
+                            - Directive
+                        - Main functions:
+                            - Supporting Project Managers
+                            - Manage shared resources
+                            - Determining project management methodologies
+                            - Coaching and mentoring
+                            - Monitoring compliance of policies, procedures by performing an audit
+                            - Coordinating communications across projects.
+                            - Make recommendations.
+                            - Provide knowledge transfers.
+                            - Terminate projects as needed.
+                    - Change control board (CCB)
+                        - Analyzing change requests and determining if the change was required and the solution is sound
+                    - Sponsor
+                        - Pays and delegate the funding
+                        - Champion and helps get it chosen
+                    - Functional manager
+                    - Procurement administrator/vendors
+                    - Customers/end users
+            - Organizational Structures:
+                - There are many structures but the 2 main types are as follows:
+                    - Functional
+                        - The manager of each department is incharge not the project manager
+                        - The project manager role might be temporary
+                        - Someone in the department is assigned to expedite the process but not given actual designation
+                    - Matrix
+                        - Weak Matrix
+                            - Operates in a functional, hierarchical design
+                        - Balanced Matrix
+                            - The balanced matrix emphasizes an equal focus on operational, functional work, and project work.
+                        - Strong Matrix
+                            - The core project team helps the project manager plan and execute the work
+                            - The project manager and project team are full time.
+                    - Projectized
+                        - The project manager has full authority.
+
+                | Functional | Weak Matrix | Balanced Matrix | Strong Matrix | Projectized |
+                | ---------- | ----------- | --------------- | ------------- | ----------- |
+                | No power   | Limited Power | Some Power | Incharge of project | Complete control |
+                | Functional manager in charge   | Functional manager in charge | Functional manager in charge | Incharge but may borrow resources | Complete control of resources |
+                | Expediter   | Co-ordinator | Co-ordinator | Project Manager | Project Manager |
+                | Part-time   | Part-time | Could be full time | Full time | Full time |
+
+            - The Project Manager's role:
+                - Managing the project team
+                - Solving problems
+                - Managing communication across multiple stakeholders
+                - The ability to collect the right requirements for scope
+                - The ability to create and manage a budget and a schedule
+                - The ability to identify, analyze, and remove threats and take advantage of opportunities
+                - Having an understanding of quality assurance and quality control as needed
+                - Effective planning skills across multiple knowledge areas
+                - Organizational skills
+            - Skills:
+                - Leadership
+                - Teambuilding
+                - Communication
+                - Active listening
+                - Consensus building
+                - Problem-solving
+                - Conflict resolution
+                - Negotiation skills
 
 Charters and stakeholders
 

@@ -20,7 +20,7 @@ Benefits of CI/CD:
             B -->C[Build Tool];
             C --> D[Build & tests];
             D --> G[Artifact store];
-            G --> H[Deployment]
+            G --> H[Local Deployment]
             H --> I[Deployed and tested]
             I --> J{Testing successful?}
             J --> |YES| K[Production Deployment]
