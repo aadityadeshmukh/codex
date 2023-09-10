@@ -105,7 +105,6 @@ nav:
     - 'Python':
       - 'Django Quick Start': 'Development/django.md'
       - 'Python database API': 'Development/python-database-api.md'
-      - 'Flask Cookbook': 'Development/flask-cookbook.md'
   - 'DevOps':
     - 'DevOps': 'DevOps/index.md'
   - 'Technologies':
