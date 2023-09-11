@@ -78,5 +78,63 @@ Overview of basic SQL commands
 
 Manipulating Data
 ??? info
-    
+
+    - The INSERT operation:
+        - The command inserts one or more rows in a table
+        - Ground rules:
+            - There is no need to provide all the values for every INSERT operation unless there is a constraint
+            - Some columns have defualt or auto generated values. 
+            - Auto generated values should not be altered
+            - Column values must always match the sequence, data-type and size requirements
+            - Numbers should not be provided in quotes. Strings, characters and date-time must be provided in quotes
+            - If names of columns are not provided then the values must be provided in a strict sequence
+            - Insert can happen only on 1 table at a time
+        - Tips:
+            - While creating a table in PostgreSQL we can use the `SERIAL` data type to auto increment IDs
+            - For date we can use NOW() function in the default values tab to auto add the creation date
+            - In case the column name is provided but we need provide the default value we can use the the `DEFAULT` keyword in the values clause
+            ```sql
+            INSERT INTO department (
+                departmentName,
+                departmentLoc)
+            VALUES
+            (
+                'Administration',
+                DEFAULT
+            ),
+            (
+                'IT',
+                DEFAULT
+            );
+            ```
+        - We can create new table which has the some or all the values of another table:
+            ```sql
+                CREATE TABLE deptdemo AS
+                SELECT * FROM departments;
+            ```
+    - The DELETE Operation:
+        - Conditional delete
+            - Delete rows which satisfy a certain criteria
+            ```sql
+            DELETE FROM employees
+                WHERE empno = 1234;
+            ```
+    - The ALTER operation:
+        - ALTER allows to change one or more properties of a table.
+        - It allows making changes to the schemas in the database
+        - Example changing the name of a column:
+        ```sql
+        ALTER TABLE departments RENAME COLUMN dept_name to deptname;
+        ```
+    - The UPDATE operation:
+        - The operation consists of the SET operation and a WHERE CLAUSE
+        - the SET clause defines what to do
+        - The where clause defines what filters to apply:
+        ```sql
+        UPDATE product
+        SET
+	        netretailprice = netretailprice * 0.90
+        WHERE
+            netretailprice = 24.99;
+        ```
         
