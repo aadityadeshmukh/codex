@@ -94,14 +94,13 @@ nav:
   - Home: 'index.md'
   - Management: 
     - 'Management': 'Management/index.md'
-    # - 'Project Management': 'Management/pmp-study.md'
-    # - 'PMBOK': 'Management/pmbok.md'
   - 'Agile Methodologies':
     - 'Agile Methodologies': 'Agile/index.md'
   - 'Development':
     - 'Development': 'Development/index.md'
     - 'Databases':
       - 'PostgreSQL Quick Start': 'Development/postgre.md'
+      - 'SQL': 'Development/sql.md'
     - 'Python':
       - 'Django Quick Start': 'Development/django.md'
       - 'Python database API': 'Development/python-database-api.md'
