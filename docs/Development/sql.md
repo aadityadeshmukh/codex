@@ -136,4 +136,65 @@ Manipulating Data
         WHERE
             netretailprice = 24.99;
         ```
-        
+
+Querying Data
+??? info
+    - The SELECT statement:
+        - A typical SQL statement is as follows:
+        ```sql
+        SELECT [COLUMNS LIST] 
+        FROM [TABLE NAME]
+        WHERE [CONDITION]
+        ORDER BY [COLUMN NAME] [ASC|DESC] 
+        LIMIT [N]
+        ```
+    - The column list can be comma separated like `product_name, quantity`
+    - If we want to fetch all columns then use `*`
+    - The FROM clause can also be provided as a comma separated list but atleast one is required
+    - The WHERE clause provides a way to put conditions on the query
+    - The ORDER BY clause provides a way to arrange the output in a specific order
+    - LIMIT allows to set a limit on the output
+    - Example Query:
+        ```sql
+        SELECT id, product_id,total, quantity 
+        FROM orders
+        WHERE quantity > 5
+        ORDER BY total desc
+        LIMIT 5;
+        ```
+    - The WHERE clause:
+        - The WHERE clause is used to shape data as per conditions
+        - There are various conditions that can be used:
+            - Comparison:
+
+            | Operation | Sign |
+            | --------- | ---- |
+            | Finding values between | WHERE <Column name> Between val1 AND val2 |
+            | Boolean Operation | >, < , <=, >=, !=, <>|
+
+            - LIKE clause
+                - Can be used to specify character patterns
+                - Usage: `WHERE <column name> LIKE 'pattern'`
+                - Example `WHERE product_name LIKE '_p%'` - This will find all products with name having 2nd letter as p
+                - Pattern table for quick reference:
+
+                | Condition | Pattern |
+                | --------- | ------- |
+                | Any value that ends with letter a | '%a' |
+                | Any value that starts with letter a | 'a%' |
+                | Any value that has letter a | '%a%' |
+                | Any value that starts with b and ends with letter a | 'b%a' |
+                | Any value that has a as a second letter | '_a%' |
+                | Any value starts with a and has atleast 3 characters | 'a_%_%' | 
+    - The JOIN clause
+        - Used to fetch data from 2 or more tables together
+
+        | Type | Description | Example | Usage |
+        | ---- | ----------- | ------- | --------------- |
+        | INNER | Used to find data common to both tables | Finding who ordered from the store | `FROM ORDERS JOIN PEOPLE` |
+        | RIGHT | Used to find data from 2nd table and matching data in first | Finding all people who have or have not ordered from the store | `FROM ORDERS RIGHT JOIN PEOPLE` |
+        | LEFT | Used to find data from 1st table and matching data in second | Finding all products which may or may not have been ordered | `FROM PRODUCTS LEFT JOIN PEOPLE` |
+        | CROSS | Combine data from one column of table 1 and another column of table 2 | Find all facecard and value cards | `FROM FACECARD CROSS JOIN VALUECARDS` |
+        | UNION | Used to combine 2 queries |  | `<Query 1> UNION <Query 2>` | 
+
+    
