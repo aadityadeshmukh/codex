@@ -389,6 +389,93 @@ Charters and stakeholders
 
 ??? info
 
+    - Politics, Power and Leadership
+        - Project manager needs to:
+            - Observe organizational landscapes in order to collect information about a project
+            - Determine project methodlogly, practices
+            - Assess project needs, complexity and magnitude
+            - Recommend a project execution strategy
+            - Recommend a project methodlogy
+            - Using iterative, incremental practices throughout the project (stakeholder engagement, risk, lessons learned)
+        - Powers of a project manager:
+            - Positional: formal authoritative power
+            - Informational: being in control of gathering information
+            - Referent: admiration due to credibility
+            - Situational: based on unique situations
+            - Personal: personal charisma
+            - Relational: networking, connections, alliances
+            - Expert: skills, experience etc.
+            - Reward-oriented: power to give praise, positive feedback
+            - Punitive: Negative consequence
+            - Ingratiating: act of flattery to win favor or co-operation
+            - Pressure-based: used in case compliance is not happening
+            - Guilt based: invoking obligation or sense of duty
+            - Persuasive: ability to move people to a desired course of action
+            - Avoiding: not participating or strategic avoidance
+            - **Project managers are supposed to be proactive and intentional about power. Dont wait for it to be granted.**
+        - Leadership vs Management:
+            - Leadership focus: relationships, inspiring trust, doing the right things and leading using relational power and innovation
+            - Management focus: systems and structure, short term goals, doing things right, bottom-line
+        - Leadership styles:
+            - Laissez-faire: (Allow to do):
+                - Allow team members to set their own goals
+                - Let them know you are available as they want you to be
+            - Transformational
+                - Motivate
+                - Allow people to trust themselves
+            - Transactional
+                - Also called management by exception
+                - Focus on project's goals
+                - Determine rewards based on milestone met
+            - Servant leadership
+                - Agile considerations
+                - A leader with this philosophy puts other people first
+                - Focus on grow, learn, develop and practice autonomy
+                - Agile focuses on self-managed teams hence this is an important style
+            - Charismatic
+                - Natural talent, high energy, strong convictions
+            - Interactional
+                - Trifecta of Transactional, Transformational and charismatic
+    - Project Integration:
+            - Project integration encompasses all the other knowledge ares
+            - It means bringing process, knowledge and people together
+            - Three levels of integration:
+                - Process level
+                - Cognitive level
+                - Context level
+    - Project charter: Goals and objectives:
+        - Prior to creation of a project charter a business case is created
+        - Business case is an output of a business analysis:
+            - Identification of scope
+            - Analysis of the situation - org goals, risks, success factors
+            - Decision criteria to assess course of action: required, desired, optional
+            - Business scenarios for alternative course of action: do nothing, do minimum work, do more than minimum work
+            - Success measures: Milestones, dependencies, roles & responsibilities
+            - Evaluation: Statement of benefits and measurement criteria
+        - Another document that is created is the Benefits management plan:
+            - Its a way to bring all benefits under one roof
+            - Focuses on how and when the sponsor organization realize benefits
+            - Typically headers include:
+                - Target benefits including NPV
+                - Strategic alignment
+                - Timeframe
+                - Owner who will be incharge of communicating these benefits
+                - Metrics
+                - Assumptions
+                - Risks to the realization of these benefits
+        - High Level requirements:
+            - At the start of the project not much is known
+            - Hence it is expected to agree on high level resources and then elaborate progressively
+            - Progressive elaboration applies to cost, schedule and scope as well as risk, quality and resources
+            - High-level requirements often include the following:
+                - The predicted result for the scope of work: A data center in Scottsdale, Arizona with some basic design specs.
+                - The results of the business case analysis: 1.5 million.
+                - High-level schedule expectations: 1 year.
+                - Mandatory milestones: Key date considerations to meet the high-level schedule.
+                - Constraints: Scope, time, cost, quality, risk, and resources.
+                - Pre-approved sellers or vendors: We're not even sure they are available or have the ability to work on this project yet.
+                - The selection committee: Those who make these decisions.
+
 Agile considerations
 
 ??? info

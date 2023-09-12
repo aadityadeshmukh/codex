@@ -113,12 +113,11 @@ Manipulating Data
                 SELECT * FROM departments;
             ```
     - The DELETE Operation:
-        - Conditional delete
-            - Delete rows which satisfy a certain criteria
-            ```sql
-            DELETE FROM employees
-                WHERE empno = 1234;
-            ```
+        ```sql
+        DELETE FROM employees
+        WHERE empno = 1234;
+        ```
+
     - The ALTER operation:
         - ALTER allows to change one or more properties of a table.
         - It allows making changes to the schemas in the database

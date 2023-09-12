@@ -94,8 +94,6 @@ nav:
   - Home: 'index.md'
   - Management: 
     - 'Management': 'Management/index.md'
-  - 'Agile Methodologies':
-    - 'Agile Methodologies': 'Agile/index.md'
   - 'Development':
     - 'Development': 'Development/index.md'
     - 'Databases':
