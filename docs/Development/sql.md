@@ -194,7 +194,6 @@ Querying Data
         | INNER | Used to find data common to both tables | Finding who ordered from the store | `FROM ORDERS JOIN PEOPLE` |
         | RIGHT | Used to find data from 2nd table and matching data in first | Finding all people who have or have not ordered from the store | `FROM ORDERS RIGHT JOIN PEOPLE` |
         | LEFT | Used to find data from 1st table and matching data in second | Finding all products which may or may not have been ordered | `FROM PRODUCTS LEFT JOIN PEOPLE` |
-        | CROSS | Combine data from one column of table 1 and another column of table 2 | Find all facecard and value cards | `FROM FACECARD CROSS JOIN VALUECARDS` |
+        | CROSS | Combine data from one column of table 1 and another column of table 2 into 1 column | Find all facecard and value cards | `FROM FACECARD CROSS JOIN VALUECARDS` |
         | UNION | Used to combine 2 queries |  | `<Query 1> UNION <Query 2>` | 
 
-    
