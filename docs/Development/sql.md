@@ -196,4 +196,52 @@ Querying Data
         | LEFT | Used to find data from 1st table and matching data in second | Finding all products which may or may not have been ordered | `FROM PRODUCTS LEFT JOIN PEOPLE` |
         | CROSS | Combine data from one column of table 1 and another column of table 2 into 1 column | Find all facecard and value cards | `FROM FACECARD CROSS JOIN VALUECARDS` |
         | UNION | Used to combine 2 queries |  | `<Query 1> UNION <Query 2>` | 
+    - The CASE clause
+        - The case clause allows to add conditional values in a variety of operations e.g. SELECT
+        - Typical example, changing the column values to a specific string based on a condition
+        ```sql
+        SELECT products.cost,
+        CASE
+            WHEN cost < 10 'cheap'
+            WHEN cost > 10 AND cost < 50 'medium'
+            ELSE 'expensive'
+        END
+        FROM manufacturing.products
+        ```
+    - Managing repeat complex queries with VIEW
+        - Before any select query just add `CREATE VIEW <VIEW_NAME> AS ...`
+        ```sql
+        CREATE VIEW high_value_orders
+        AS
+        SELECT * from orders
+        WHERE ORDERS.price > 30
+        ```
+        - The views can be treated as another table
+
+Aggregate Functions
+??? info
+    - The aggregate functions are as follows:
+        - SUM
+        - AVG
+        - COUNT
+        - MIN
+        - MAX 
+    - The aggregate functions can be complimented by the GROUP_BY clause to provide some breakouts
+    - Example:
+    ```sql
+    SELECT    PC.ProductCategoryID, PC.ProductCategoryName, AVG(P.UnitKGWeight) AS 'AVERAGE PRODUCT KG WEIGHT', 
+              MIN(P.NetRetailPrice) AS 'MINIMUM NET RETAIL PRICE'
+    FROM    ProductCategories PC INNER JOIN
+            Products P ON PC.ProductCategoryID = P.ProductCategoryID
+    GROUP BY  PC.ProductCategoryName, PC.ProductCategoryID;
+    ```
+    - In order to filter results based on an aggregation we need to use the HAVING clause. The where clause does not help
+    ```sql
+    SELECT  PC.ProductCategoryName, SUM(P.AvailableQuantity) AS 'TOTAL COUNT OF ALL PRODUCTS IN PRODUCT CATEGORY'
+    FROM    Products P INNER JOIN ProductCategories PC ON
+            P.ProductCategoryID = PC.ProductCategoryID
+    GROUP BY  PC.ProductCategoryName
+    HAVING    SUM(P.AvailableQuantity) > 250
+    ORDER BY  ProductCategoryName;
+    ```
 

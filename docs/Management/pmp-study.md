@@ -475,7 +475,65 @@ Charters and stakeholders
                 - Constraints: Scope, time, cost, quality, risk, and resources.
                 - Pre-approved sellers or vendors: We're not even sure they are available or have the ability to work on this project yet.
                 - The selection committee: Those who make these decisions.
-
+        - Criteria of a Project Charter:
+            - In case of a question regarding accepting a project without a charter the correct answer is "Mention risks and reject the project"
+            - A charter is created once everyone agrees on the items thusfar i.e. scope of work, business case etc.
+            - The charter includes known problems, opportunities, risks, time frames and overall budget
+            - Project charter is created after business case and benefits management plan is created
+            - Charter is written and signed by the sponsor and is a formal authorization to start a project
+            - It names the Project manager.
+            - Why it is important to have a project charter before kickoff:
+                - Describes aggreed upon scope
+                - Assigns a Project Manager and allows authority change from sponsor to PM
+                - Identifies key stakeholders
+                - its a written aggreement to start the project
+        - Typical Headers in a Project Charter:
+            - Executive Summary:
+            - Project Name:
+            - Authorities:
+            - Project Manager:
+            - Initiating authority:
+            - Business Need:
+            - Project Description:
+            - Product\Service Characteristics:
+            - Project relationship to business need:
+            - Assumptions:
+            - Constraints:
+            - Risk events:
+            - Approval:
+        - Agile Project Charter:
+            - A project charter is needed in Agile as well but is more flexible
+            - It can change and be adapted based on changes 
+        - Typical Headers in an Agile project charter:
+            - Who: Stakeholders
+            - What: high level description
+            - When: timelines 
+            - Where: worksites
+            - Why: reason for project
+            - How: full agile or a tailored approach
+            - Buy-in: Signatures for official buy-in
+    - Charter ITTOs:
+        - Inputs:
+            - Business documents: Business case, benefits management plan
+            - Aggreements: SLAs, MOUs, contracts
+            - Enterprise environmental factors: stakeholder expectations, regulatory, culture
+            - Operational process assets: processes, monitoring and reporting methods, templates
+        - Tools and Technologies:
+            - Expert Judgement
+            - Data gathering:
+                - Brainstorming
+                - Focus Groups
+                - Interviews
+            - Iterpersonal & team skills:
+                - Conflict management
+                - Facilitation
+                - Meeting management
+            - Meetings
+        - Outputs:
+            - Project Charter
+            - Assumption log
+    - Stakeholder Management
+        - 
 Agile considerations
 
 ??? info
