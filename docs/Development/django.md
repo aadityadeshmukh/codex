@@ -499,6 +499,23 @@
         </div>
     </nav>
     ```
+??? info "Connecting to Postgres"
+    - Your Postgres ==settings.py== should look like this:
+    ```py
+        DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.postgresql',
+            'NAME': '<database_name>',
+            'USER': 'user_name',
+            'PASSWORD': 'password',
+            'HOST': 'localhost',
+            'PORT': '5430',
+            }
+        }
+    ```
+    - After this create migrations using `python manage.py makemigrations`
+    - Next step is to run migrations `python manage.py migrate`
+    - The data (models) should now show up in postgresql database
 
 ??? example 
     
