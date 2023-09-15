@@ -533,8 +533,60 @@ Charters and stakeholders
             - Project Charter
             - Assumption log
     - Stakeholder Management
-        - 
-        
+        - The main idea of this knowledge area is to identify and manage stakeholder satisfactions levels & focus on effective communication
+        - The main tasks include:
+            - Engaging stakeholders
+            - Analyzing stakeholders
+            - Categorizing stakeholders
+            - Engaging stakeholders by category
+            - Strategizing stakeholder communications
+        - Key concepts:
+            - Overview of concepts:
+                - Identify, plan. manage and monitor stakeholder engagement
+            - Details:
+                - Engagement should begin as soon as the project is chartered
+                - Managed as a project objective
+                - Continuous communication
+                - Stakeholder list should be updated regularly as project moves through various phases
+            - Emerging trends:
+                - Identify all stakeholder instead of just a few ones
+                - Ensuring the team is involved
+                - Review stakeholder community regularly
+                - Consulting most affected stakeholders via "co-creation"
+                - Capture both positive and negative value of engagement
+                - Communication technology
+            -  Adaptive \ Agile environments:
+                - Aggressive transparent communication
+                - Client, user and developers work in a co-creation environment
+    - Stakeholder analysis:
+        - Outputs:
+            - Identify the stakeholders and their interest in the outcome
+            - Rights: Legal or moral
+            - Ownership: knowledge or financial contribution or being a buffer
+        - Determine the outputs and categorize them
+        - Data representation:
+            - Power \ Interest or Power \ influence grid or Power \ Impact grid
+                - If a person has high power and high influence then manage them closely
+                - If a person has low power and low influence minimal communication should suffice
+            - Stakeholder cube
+            - Salience model
+                - Used in a complex network of stakeholders
+            - Direction on influence
+                - Also known as heirarchy of involvement
+                - Upward to senior management
+                - Downward to team
+                - Outward to suppliers
+                - Sideways to project managers
+            - Prioritization
+    - Stakeholder register:
+        - Ask the following questions to create a register:
+            - How do you prefer to communicate? Email? Telephone? Meetings?
+            - How often would you like updates and status reports?
+            - Would you prefer to pick and choose which meetings to attend and if so, I won't put "required" on the invite?
+            - What are your needs and concerns about this project?
+            - What is the planned level of involvement you are expecting?
+            - What are your expectations of the deliverable, schedule, budget, and so on?
+
 Agile considerations
 
 ??? info
