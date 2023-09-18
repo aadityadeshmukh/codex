@@ -20,3 +20,9 @@ All the knowledge base related to management topics.
     
     ---
     [Explore](pmp-study.md)
+
+??? info "Prince2 Agile - Study Prep"
+    Notes from the Prince2 - Agile body of knowledge
+
+    ---
+    [Explore](prince-notes.md)
