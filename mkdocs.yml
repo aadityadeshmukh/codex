@@ -2,7 +2,7 @@ site_name: CODEX
 theme:
   name: material
   icon:
-    logo: material/asterisk-circle-outline
+    logo: fontawesome/solid/asterisk
   favicon: assets/images/favico.png
   font:
     text: Space Mono
