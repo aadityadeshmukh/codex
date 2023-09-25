@@ -105,4 +105,7 @@ Statistics
             cities = ["Pune", "Mumbai", "Delhi"]
             engineers = [230,333,421]
             plt.pie(engineers, labels=cities, autopct='%.2f%%')
+
+            # PLotting a value plot
+            sns.valueplot(x='ColumnName', hue='ColumnName', data = fileData)
         ```
