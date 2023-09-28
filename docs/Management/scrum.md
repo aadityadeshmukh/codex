@@ -126,7 +126,35 @@
 - Modern methods suggest to expect uncertainity and assume atleast 1 is variable
 - We need to estimate only the variables and assess the estimate against the risk
 - After considering the variables if the risk is in the acceptable zone then we are good to go
+- When to estimate:
+    - The estimation happens in a Product backlog refinement event
+    - The idea is to break down large product backlog items into "SMALL" chunks
+    - Small enough to be I/A within the Sprint
+    - If the PBI is already "SMALL" then there is no reason to estimate
+- Common tools and techniques:
+    - Planning poker:
+        - Technique of estimation based on Size
+        - Team has got PBI to work on which they will estimate using a unit e.g. Story points
+        - The prerequisite is there should be a reference story or stories that deem a story to have certain story points
+        - And all members should ideally come up with the same story points
+- During the Sprint planning only "SMALL" stories must be allowed
+- Sprint planning has a layer of estimations \ forecasts as well.
+- It includes either one of the two:
+    - Capacity based planning
+        - Number of hours available vs number of hours required to finish the Sprint goal
+    - Historical data based planning
+        - Based on historical data how many PBIs have we completed
+        - That gives a range of the possible PBIs we can complete
+        - Again this is an estimation not committment
 
+#### Velocity
+
+- Ideally if all stories are small they can be given 1 story point
+- Assuming this we will consider the velocity concept i.e. 1 story = 1 story point
+- We need to calculate velocity by adding all historical story points and finding an average per sprint
+- Use this velocity to forecast based on release strategy
+- The concept is illustrated below:
+![Velocity](../assets/images/management/velocity.png)
 
 #### Kano Model for prioritizations
 - The Kano Model is a tool for measuring customer satisfaction. 
@@ -141,6 +169,9 @@
     - Reverse zone : Feature existence is a problem
 - The kano graph is illustrated below:
 ![A typical Kano graph](../assets/images/management/kano.png)
+
+#### Burndown Charts / Burn up charts
+
 
 
 
