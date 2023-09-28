@@ -120,6 +120,12 @@
     - Effort estimations
         - Estimates based on time needed to implement
         - These are linear estimates
+- Estimation criteria : Scope, Time, Cost, Quality
+- Traditional methods of Fixed cost, scope, time and quality work only when we are in the "simple zone"
+- Estimations are not commitments
+- Modern methods suggest to expect uncertainity and assume atleast 1 is variable
+- We need to estimate only the variables and assess the estimate against the risk
+- After considering the variables if the risk is in the acceptable zone then we are good to go
 
 
 #### Kano Model for prioritizations
