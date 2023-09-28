@@ -2,7 +2,7 @@
 
 ## Agility Basics
 
-![A complex zone](../assets/images/management/stacey.png){width="800"}
+![A complex zone](../assets/images/management/stacey.png)
 
 - The concept of Agile can be better understood using a stacey diagram.
 - A stacey diagram shows the relationship between degree of certainity and degree of aggreement in a project
@@ -45,5 +45,96 @@
 - Scrum is an empirical process of Plan, do, check, and act activities
 
 ## Tools, Techniques and Strategies
+
+#### Working Agreements
+
+- ==Mutually agreed activities and behaviours== that make us ==achieve our goals effectively, efficiently== as a ==team.==
+- Benefits:
+    - sets clear expectations from each other
+    - accountability for each others behaviours
+    - successfully helps working toward a common goal
+    - handle conflicts
+    - creates effective and efficient teams
+- Who:
+    - The scrum team can brainstorm on ideas to aggree on activities and behaviors
+    - Stakeholders and customers can be consulted for suggestions
+- When:
+    - To be created immediately when the team is identified
+    - Can be updated during sprint retrospectives
+- Contents:
+    - Values (FROCC)
+    - Ways to deal with conflict
+    - Activities and behaviors for achiving common goals like continuous improvements
+    - Individual commitments 
+    - Purpose of the team
+
+#### Common Terminologies
+
+- Definition of Ready:
+    - This is a list of items that tells if a PBI is ready to be considered for a sprint
+    - This is not a checklist where each item has to be done
+    - Examples:
+        - All acceptance criterion are discussed and agreed
+        - All dependencies and risks are resolved or agreed resolution plan is in place
+        - All questions are answered
+        - Size of the PBI is small
+        - Assumptions clarified
+        - Prioritized and ordered
+- Definition of Done:
+    - List of all items that are needed to qualify an item as 100% done
+    - It includes all process, quality related items
+    - Evolves over time
+    - It is an ideal state that defines the work is done
+    - Examples:
+        - Coding is complete
+        - Quality and functional checks complete
+        - Tests added and run
+        - Reviews done
+        - Documentation done
+        - Organization defined quality processes done
+- Acceptance Criteria:
+    - Mutually Aggreed Solution Statement
+    - It defines the functionality that needs implementation
+    - Examples:
+        - Have a search functionality
+        - Show top 16 items to user
+- Release Strategy:
+    - Defined by the Product owner
+    - It describes how, what and when are we release product iterations to customers
+    
+    Types:
+
+    | Time based - Fixed | Time based - Cadence based | Scope based |
+    | ------------------ | -------------------------- | ----------- |
+    | The release date is fixed | The release cadence is fixed | The number of features is fixed |
+    | 16.12 | Daily, Weekly, Monthly etc. | 75 features |
+
+#### Estimations
+
+- There are 2 types of estimations:
+    - Size estimations
+        - These use reference points to estimate complexity of a story
+        - T-Shirt size : S, M, L, XL...
+        - Story points : 1, 2, 3, 5, 8 ...
+        - These are non linear estimates
+    - Effort estimations
+        - Estimates based on time needed to implement
+        - These are linear estimates
+
+
+#### Kano Model for prioritizations
+- The Kano Model is a tool for measuring customer satisfaction. 
+- It prioritizes features based on how customers react to their presence or absence.
+- The Kano model suggests prioritization based on the effect it will have on the end user
+- A graph is plotted between customer satisfaction and future state of the feature
+- A line is plotted based on the customer satisfaction levels and the following pattern emerges:
+    - Basic expectations : Bare minimum expectations
+    - Linear expectations : Keep giving more
+    - Neutral expectations : Does not matter if it exists or not
+    - Exciting zone : Whoa we were not expecting it
+    - Reverse zone : Feature existence is a problem
+- The kano graph is illustrated below:
+![A typical Kano graph](../assets/images/management/kano.png)
+
 
 
