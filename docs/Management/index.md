@@ -26,3 +26,9 @@ All the knowledge base related to management topics.
 
     ---
     [Explore](prince-notes.md)
+
+??? info "Scrum"
+    Notes from Scrum Master Training
+
+    ---
+    [Explore](scrum.md)
