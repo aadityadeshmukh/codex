@@ -1,3 +1,7 @@
+---
+hide:
+    - navigation
+---
 # The SCRUM framework
 
 ## Agility Basics
@@ -21,6 +25,7 @@
 
 [Agile manifesto :material-arrow-top-right:](http://agilemanifesto.org/){.md-button} [Agile principles :material-arrow-top-right:](http://agilemanifesto.org/principles.html){.md-button}
 
+------------------------------------------------
     
 ## Scrum Fundamentals
 
@@ -43,6 +48,8 @@
 - Product increment does not mean release
 - Release strategy is completely dependent on the PO
 - Scrum is an empirical process of Plan, do, check, and act activities
+
+-----------------------------------------------
 
 ## Tools, Techniques and Strategies
 
