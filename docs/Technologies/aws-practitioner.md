@@ -129,9 +129,103 @@ B --> A;
 
 ## Global Infra and Reliability
 
+- AWS ditributes its data centers accross the world and calls it "Regions"
+- Each region has multiple data centers and they are all connected with fiber optic connectivity
+- This is done to provide highly available and fault tolerant infrastructure
 
+#### Regions
+
+- There are 4 main criterion to consider while choosing a region:
+    - Compliance
+    - Proximity
+    - Feature availability
+    - Pricing
+
+#### Availability Zones
+
+- Availability zones are data centers or collection of them physically isolated withing a region
+- As a best practice we should have resources deployed in 2 AZs at any time to be fault tolerant
+- Any AWS service that is tagged "Regionally scoped service" is automatically regionally highly available e.g. Load balancer
+
+#### Edge locations
+
+- These are locations with cached copy of the application and its data to serve nearby customers
+- This is basically a CDN and is called Amazon CloudFront
+- The networking is done using Amazon DNS service Route53
+- In case the customers need a local copy that is installed in their buildings then use AWS Outposts
+
+#### How to provision AWS resources
+
+How to interact:
+
+- "Management Console"
+    - Browser based console to manually manage and monitor resources
+- "AWS CLI"
+    - A command line utility to script AWS commands and automate the management
+- "SDKs"
+    - Programming language specific development kits to automate the management
+
+How to provision:
+    - Using the interaction tools
+    - Elastic beanstalk
+        - EC2 based tool
+        - Takes code and desired configuaration and inputs and builds the infrastructure
+        - Provides visibility as well
+    - AWS Cloud formation
+        - IaC tool
+        - Can be used with a host of services not just EC2
+        - Uses text based configuration files to build resources
+        - Less prone to error
 
 ## Networking
+
+#### Virtual Private Cloud
+
+- VPC is essentially a private network inside AWS
+- Inside the VPC services can be arranged based on the requirements in buckets called subnets.
+- There are 2 possible subnets:
+    - Public 
+    - Private
+- Considering 3 possible scenarios based on requests:
+    - Public requests to AWS cloud via open internet
+        - Use internet gateway
+        - E.g. Users requesting access to our site
+    - Private requests to AWS cloud via VPN over open internet
+        - Use virtual private gateway
+        - Data center connections, internal users contacting the network via a VPN
+    - Private requests to AWS cloud via a dedicated network
+        - Use AWS direct connect
+        - This reduces network costs and increases bandwidth
+        - Data center connections routed via direct connect locations and connecting via virtual private gateway
+
+    ![VPC with subnets](../assets/images/Technologies/vpc.png)
+
+#### Network ACLs and Security groups
+
+- The access to VPC is granted by gateways.
+- But this only secures the perimeter
+- The subnets inside the VPC are accessed via the network access lists (Network ACLs) of the gateway
+- These are stateless firewalls which allow or deny access to the subnets based on a list
+- The default ACL allows all inbound and outbound traffic
+- Custom ACLs can be used to decide security on this level
+- Once the packets are inside the subnet the EC2 instances need a security layer on their level as well
+- This is called a Security group
+- These are stateful systems that allow or deny packets to the EC2 instances
+- Security groups are implicit deny which means only the allowed traffic is let in
+
+#### GLobal networking
+
+- When a customer tried to connect to say a company website it uses a DNS resolver
+- The DNS resolver translates the request to an IP address and allows the connection to the website
+- Amazon has Route 53 to provide DNS resolution
+- It helps connect infrastructure inside and outside AWS as well
+- It has certain strategies to achieve DNS resolution:
+    - Geolocation based
+    - Geoproximity based
+    - Latency based
+    - Weighted round robin
+- Another service that provides Global networking is Amazon CloudFront which is a CDN
+
 
 ## Storage and Databases
 
