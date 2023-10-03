@@ -32,6 +32,8 @@ B --> A;
 
     Eg. batch processing automatin is in cloud but all other aspects are OnPremise
 
+---
+
 - Benefits of cloud:
     - Variable costs over upfront costs
     - No need to maintain own data centers
@@ -433,5 +435,77 @@ D -->|inherited SCPs| F[Account 4];
 
 ## Migration and Innovation
 
+#### AWS Cloud Adoption Framework
+
+- AWS professional services team has created a framework that helps people migrate to the cloud
+- It has 6 pillars and results into an action plan
+```mermaid
+graph LR    
+A[Cloud Adoption Framework] --> B[Business];
+A --> C[People];
+A --> D[Governance];
+A --> E[Platform];
+A --> F[Security];
+A --> G[Operations];
+B --> H[Business, Finance managers];
+C --> I[HR, Staffing];
+D --> J[CIO, program managers, enterprise architects]
+E --> K[CTO, Solution architects]
+F --> L[CISO, IT Security Managers]
+G --> M[IT Ops managers]
+```
+
+#### 6 Rs of Migration
+```mermaid
+graph LR
+A[6 Rs] --> |Lift and shift| B[Rehosting]
+A --> |Lift tinker and shift| C[Replatforming]
+A --> |Remove apps not needed| D[Retire]
+A --> |Keep for a limited time| E[Retain]
+A --> |New infrastructure for new possibilities| F[Repurchase]
+A --> |Changing code to achieve new things|G[Refactor]
+```
+
+#### Snow Family
+
+- Family of physical devices used to transport data from OP to on cloud
+- The devices are:
+    - Snow Cone
+        - Upto 14TB of storage
+    - Snow Ball
+        - Storage optimized
+            - 80TB of data
+            - 40cpus
+        - Compute optimized
+            - 80TB
+            - 104 vcpus
+    - Snow Mobile
+        - Exa bite container truck
+
+#### Innovation
+
+- Serverless
+    - AWS Lambda
+- Machine Learning
+    - AWS SageMAker
+- AI
+    - Augmented AI
+    - Code Whisperer
+
 ## Cloud Journey
+
+#### AWS Well Architected Framework
+- The framework has 6 main pillars
+- It is a collection of best practices that helps design or evaluate current AWS systems
+- The framework either needs to be evaluated by a Solution architect or needs to be evaluated using a self service tool
+
+```mermaid
+graph TD
+A[AWS WAF] --> B[Operational Excellence]
+A --> C[Security]
+A --> D[Cost Optimization]
+A --> E[Reliability]
+A --> F[Performance Efficiency]
+A --> G[Sustainability]
+```
 
