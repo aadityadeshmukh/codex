@@ -229,11 +229,207 @@ How to provision:
 
 ## Storage and Databases
 
+#### Block storage
+- EC2 instances have associated block storage but they are ephemeral and data is tied to EC2 lifecycle
+- To solve this problem amazon provides EBS or Elastic block storage
+- These can be provisioned as per size needs and attached to EC2 and the data persists
+- EBS allows to take regular snapshots of data so that disaster recovery is possible
+- These backups are incremental i.e. only the data that is changed is backed up
+- Stores data in an Availability zone
+
+#### Simple Storage Service
+- Amazon stores the files as objects
+- An object is the file itself, metadata and a key
+- These objects are stored inside buckets (think folders)
+- Maximum size of the object is 5TB
+- Durability: 99.99999999%
+- The objects can be stored in multiple tiers namely:
+    - S3 standard
+    - S3 Infrequent Access
+    - S3 one zone Infrequest access
+    - S3 Intelligent tiering
+    - S3 Glacier Instant retrieval
+    - S3 Glacier Flexible retrival
+    - S3 Deep archive
+    - S3 outposts
+- Amazon also provides lifecycle policies that can control the tiers based on usage and number of days for example
+
+#### EBS vs S3
+- If you have a single file where you need to do micro edits choose EBS
+- If you have large files that need to be dealt with as discrete objects then use S3
+
+#### Elastic File System
+- True managed Linux file system
+- The system supports multiple read and write connections
+- Scales automatically
+- Regionally scoped. EBS is AZ scoped
+- On-premises can access data using Amazon Direct connect
+
+#### Relational databases
+- AWS supports relational databases to be installed on EC2 servers
+- Supported databases:
+    - PostgreSQL
+    - Oracle
+    - MySQL
+    - MariaDB
+- This is typically called lift-and-shift
+- That way all of the current database activities and variables are available from the cloud
+- It automates tasks such as hardware provisioning, database setup, patching, and backups.
+- However, if we need a more managed approach then we can use Amazon Relational database System or RDS
+- Amazon aurora is fully managed professional database system in the cloud
+- It supports PostgreSQL and MySQL and provides the service at 1/10th the cost of other offerings
+- It replicates six copies of your data across three Availability Zones and continuously backs up your data to Amazon S3.
+
+#### Amazon DyanmoDB
+- Dynamo DB is a fully managed serverless (no need to provision, patch or manage servers) database
+- It is a non-relational and no-sql database specifically a key-value database
+- It stores data as items and attributes
+- It also has millisecond response times
+- It is purpose built i.e. it only suits a certain work loads
+
+#### Amazon Redshift
+- Managed data warehousing solution
+- Warehousing is used when we try to answer the question "what happened"
+- Used for big data analytics and BI analytics workflows
+
+#### Amazon Data migration service
+- Used when:
+    - migrating onPremise data to cloud
+    - production to dev and test database
+    - consolidating databases
+    - continuous replication
+- Can be used to move data from different databases as well
+- For example OP MySQL can be migrated to Cloud PostgreSQL
+- The source database does not stop during migration and can still be accessed
+
+#### Additional databases
+
+| Service | Type | Use | Remarks |
+| ------- | ---- | --- | ------- |
+| DocumentDB | Database |  User profiles etc | MongoDB workloads |
+| Neptune | Database | Social network, fraud detection | Graph database |
+| Quantum Ledger | Database | compliance Audits | Immutable database entries |
+| Elasticache | Accelerator | comes in redis and memcached flavours | improves fetch from databases |
+| DynamoDB accelerator | Accelerator | | improves DynamoDB fetches |
+
 ## Security
+
+#### Shared responsibility model
+
+- Security of the cloud - Owned by AWS
+    - Physical infrastructure
+    - Servers
+    - Hypervisors
+- Security in the cloud - Owned by the customers
+    - OS
+    - Applications
+    - Data
+
+#### Identity & Access Management
+
+- AWS provides a variety of options to control the access to the platform and its services
+    - Root User:
+        - Has access to everything
+        - Best practice is to add MFA as soon as 1st login
+        - Create new users based on tasks and assign permissions and use the created users to do tasks
+    - Users, User groups, policies:
+        - Root can create users and add them to user groups
+        - The activities they can perform are governed by policies
+        - Policies define the activities users or user groups can perform, resources they can access 
+    - Roles:
+        - Allows users to assume temporary responsibility and do tasks
+
+```mermaid
+graph TD
+A[root user] -->|policies| B[user 1];
+A -->|policies| C[user 2];
+A -->|policies| D[user group 1];
+D -->|inherited policies| E[user 4];
+D -->|inherited policies| F[user 5];
+A -->|temporary responsibility| G[user 5 role 1]
+```
+
+
+#### AWS Organizations
+- AWS organizations is a service that allows grouping and managing AWS accounts 
+- It allows to set SCPs (service control policies) on individual accounts and group of accounts (Organizational units)
+
+```mermaid
+graph TD
+A[AWS Organization] -->|SCPs| B[Account 1];
+A -->|SCPs| C[Account 2];
+A -->|SCPs| D[Organization Unit];
+D -->|inherited SCPs| E[Account 3];
+D -->|inherited SCPs| F[Account 4];
+```
+
+#### Compliance
+- AWS has a shared responsibility model
+- It completes part of the compliance requirements on its own
+- The services and data built on top of AWS the compliance needs to be done by the company
+- They can use the compliance functionality themselves or use the exisitng features in AWS
+- All compliance reports can be accessed via "AWS Artifacts"
+- Compliance center is a one stop solution to get all information related to compliance requirements for various use cases
+
+#### DDos
+
+- A well architected system is already capable of handling some types of DDos attacks
+- For example, security groups and ALB can take care of UDP flood and SLow loris type attacks
+- AWS Shield is a service that can be used to protect against sophesticated attacks
+- It has 2 modes:
+    - Standard
+    - Advanced
+- It has a WAF web application firewall that takes care of the bad actor signatures and has ML capabilities
+
+#### Additional services
+- KMS - Key management systems that provides encryption at rest and transit
+- Inspector - Regular security scans
+- Guard duty - Proactive threat detection with continuous monitoring
 
 ## Monitoring and Analytics
 
+#### CloudWatch
+- Amazon cloudwatch collects metrics from host of services and helps show them in one place
+- It allows to set alarms based on data points to trigger actions
+
+#### Cloudtrail
+- Making changes to the system in AWS is API driven
+- Cloudtrail helps to identify changes based on these API calls
+- It records who, what, when, how aspects of the change for effective audit
+- CloudWatch Insights is a service we can use to detect unusual activity and get alerts
+
+#### Trusted Advisor
+- Web service that provides information based on best practices of using AWS
+- It provides information on 5 pillars:
+    - Cost Optimization
+    - Performance
+    - Security
+    - Fault tolerance
+    - Service limits
+- Useful to avoid high costs and optimize for best use
+
 ## Pricing and Support
+
+- AWS offers free tier which are either forever free, 12 month free or limited trial free types
+- Pricing model is either:
+    - Pay per use
+    - Reduced pricing for commitment
+    - Redeuced pricing for volume based usage
+- AWS has a billing dashboard where you can view MTD view of the resource usage
+- You can also check Billing info
+- AWS offers consolidated billing for users of AWS Organizations
+- They can get simplified billing, share premium savings features withing accounts and the service is free
+- AWS provides a way to create budgets based on actual or forecasted usage and set alerts
+- Its called AWS Budgets
+- AWS cost explorer lets you analyze the past data for cost.
+- You can create a dashboard and filter by tags to analyze the data
+- AWS offers support in the following tiers:
+    - Basic - Free - limited trusted advisor checks 
+    - Developer - Basic + best practice guidance etc.
+    - Business - This and above includes AWS Trusted advisor
+    - Business On-Ramp - This and above includes TAM (Technical Account Manager)
+    - Business Enterprise
+- AWS Marketplace lets you search for tools and apps built on AWS for 1 click solutions
 
 ## Migration and Innovation
 
