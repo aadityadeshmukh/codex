@@ -14,3 +14,8 @@
     
     ---
     [Explore](azure-practitioner.md)
+
+??? info "Snowflake DB"
+
+    ---
+    [Explore](snowflake.md)
