@@ -179,6 +179,19 @@ hide:
 
 #### Burndown Charts / Burn up charts
 
+![Burn down and Burn up](../assets/images/management/burnup-burndown.png)
+- Burndown Charts
+    - A burndown chart represents the remaining work on the Y axis and time elapsed on the X axis
+    - The connection of total remaining work point at the start of the time period and the end point of the time period serves as a line of average burndown
+    - A burndown chart is an Inspect and Adapt tool during the time period. After the time period its not so useful.
+    - The time period can be a Sprint or Release
+- Burnup charts
+    - Represents the work done and usually approaches a target
+    - It has the same elements as burndown charts but tracks a target
+- When to use:
+    - Use Burnup chart when tracking a target e.g. in a Fixed scope release strategy.
+    - Use Burndown chart to Inspect and adapt remaining work at any point in a time box.
+
 
 
 
