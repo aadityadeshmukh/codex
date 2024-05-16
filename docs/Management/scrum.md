@@ -180,6 +180,7 @@ hide:
 #### Burndown Charts / Burn up charts
 
 ![Burn down and Burn up](../assets/images/management/burnup-burndown.png)
+
 - Burndown Charts
     - A burndown chart represents the remaining work on the Y axis and time elapsed on the X axis
     - The connection of total remaining work point at the start of the time period and the end point of the time period serves as a line of average burndown
