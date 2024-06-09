@@ -8,6 +8,9 @@ hide:
 - DevOps stands for Development & Operations. 
 - It means shared responsibilities between the development and operations teams.
 - The development team work being aware of the challenges faced by operations and contribute and ops team work more like developers with proper flow and process.
+- DevOps is not a framework or a workflow. 
+- It's a culture that is overtaking the business world. 
+- DevOps ensures collaboration and communication between software engineers (Dev) and IT operations (Ops). With DevOps, changes make it to production faster, Resources are easier to share, And large-scale systems are easier to manage and maintain.
 
 Basics
 

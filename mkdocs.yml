@@ -10,15 +10,15 @@ theme:
   palette:
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
-      primary: teal
-      accent: teal
+      primary: black
+      accent: blue
       toggle:
         icon: material/toggle-switch
         name: Switch to light mode
     - media: "(prefers-color-scheme: light)"
       scheme: default
-      primary: teal
-      accent: teal
+      primary: black
+      accent: blue
       toggle:
         icon: material/toggle-switch-off-outline 
         name: Switch to dark mode
@@ -95,18 +95,18 @@ markdown_extensions:
       custom_checkbox: true
 nav:
   - Home: 'index.md'
-  - Management: 
-    - 'Management': 'Management/index.md'
-  - 'Development':
-    - 'Development': 'Development/index.md'
-    - 'Databases':
-      - 'PostgreSQL Quick Start': 'Development/postgre.md'
-      - 'SQL': 'Development/sql.md'
-    - 'Python':
-      - 'Django Quick Start': 'Development/django.md'
-      - 'Python database API': 'Development/python-database-api.md'
-  - 'DevOps':
-    - 'DevOps': 'DevOps/index.md'
-  - 'Technologies':
-    - 'Technologies': 'Technologies/index.md'
-  - 'Portfolio': 'resume.md'
+  # - Management: 
+  #   - 'Management': 'Management/index.md'
+  # - 'Development':
+  #   - 'Development': 'Development/index.md'
+  #   - 'Databases':
+  #     - 'PostgreSQL Quick Start': 'Development/postgre.md'
+  #     - 'SQL': 'Development/sql.md'
+  #   - 'Python':
+  #     - 'Django Quick Start': 'Development/django.md'
+  #     - 'Python database API': 'Development/python-database-api.md'
+  # - 'DevOps':
+  #   - 'DevOps': 'DevOps/index.md'
+  # - 'Technologies':
+  #   - 'Technologies': 'Technologies/index.md'
+  # - 'Portfolio': 'resume.md'

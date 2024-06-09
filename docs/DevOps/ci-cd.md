@@ -4,6 +4,8 @@ hide:
 ---
 # Continuous Integration / Continuous Delivery
 
+Continuous Integration and Delivery means continuously building, testing, and delivering your code, you can reap huge stability, speed, and flexibility benefits.
+
 Benefits of CI/CD:
 ??? info
     - CI/CD systems can differ a lot depending on the technology
