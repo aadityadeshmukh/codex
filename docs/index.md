@@ -14,7 +14,7 @@ hide:
 
 !!! info inline ""
     <!-- ![](https://placehold.co/500x360) -->
-    ## Management
+    ## Management 
     ---
     *All things related to Management*
 
@@ -42,7 +42,7 @@ hide:
     ---
     *All things related to Technologies*
 
-    [Explore ↗](Management/index.md)
+    [Explore ↗](Technologies/index.md)
 
 
 
