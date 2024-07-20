@@ -7,28 +7,37 @@ hide:
 
 # Management 
 
-All the knowledge base related to management topics.
+All the knowledge related to management topics.
 
-??? info "PMBOK(7th edition) - Project Management Body of Knowledge"
-    PMBOK is a guide for project management, published by PMI. It has 12 principles and eight domains for delivering project outcomes. It is not a fixed method, but a flexible framework that can be customized and combined with other methods. It helps project managers and teams communicate and work better.
+!!! info inline ""
+    ## PMBOK
+
+    ---
+    Project Management Body of Knowledge
     
+    [Explore ↗](pmbok.md)
+
+!!! info inline ""
+    ## PMP
+
     ---
-    [Explore](pmbok.md)
-
-
-??? info "PMP - Study Prep"
+    Project Management Professional notes
     
-    ---
-    [Explore](pmp-study.md)
+    [Explore ↗](pmp-study.md)
 
-??? info "Prince2 Agile - Study Prep"
-    Notes from the Prince2 - Agile body of knowledge
-
-    ---
-    [Explore](prince-notes.md)
-
-??? info "Scrum"
-    Notes from Scrum Master Training
+!!! info inline ""
+    ## Prince 2
 
     ---
-    [Explore](scrum.md)
+    Complete knowledge on the Prince 2 framework
+    
+    [Explore ↗](prince-notes.md)
+
+!!! info inline ""
+    ## Scrum
+
+    ---
+    Complete knowledge on the Scrum framework
+    
+    [Explore ↗](scrum.md)
+

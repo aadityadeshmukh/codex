@@ -7,15 +7,22 @@ hide:
 
 # Devops
 
-??? info "Fundamentals"
+!!! info inline ""
+    ## Fundamentals
+
     ---
-    [Explore](devops-fundamentals.md)
+    [Explore ↗](devops-fundamentals.md)
 
 
-??? info "CI/CD"
-    ---
-    [Explore](ci-cd.md)
+!!! info inline ""
+    ## CI/CD
 
-??? info "Infrastructure as Code"
     ---
-    [Explore](iac.md)
+    [Explore ↗](ci-cd.md)
+
+!!! info inline ""
+    ## IaC
+
+    ---
+    [Explore ↗](iac.md)
+    

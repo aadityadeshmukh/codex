@@ -3,9 +3,9 @@
 ## Core Azure Concepts
 
 - Azure Subscription
-    - Its basically an account where all your services will be stored
--Resource groups
-    - Its basically a bucket in which you can store your services
+    - Its an account where all your services will be stored
+- Resource groups
+    - Its a bucket in which you can store your services
     - Logically grouping them and providing permissions as needed
     - Two resource groups cannot share a resource
 - Tagging

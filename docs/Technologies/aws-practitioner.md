@@ -1,7 +1,7 @@
 # AWS Basics
 
 ## Introduction
-
+- Notes from the [AWS practitioner essentials learning](https://explore.skillbuilder.aws/learn/course/134/play/85854/aws-cloud-practitioner-essentials) course ware from amazon.
 - AWS is built on the client server model
 - The client for example a web browser sends a request to the server for example a AWS EC2 cluster
 - The server returns the information requested
