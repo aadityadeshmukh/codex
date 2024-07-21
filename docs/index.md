@@ -7,7 +7,8 @@ hide:
 
 # Home
 
-### Welcome to Codex!
+
+Hello! My name is Aditya and this is Codex. Explore curated insights and high-level overviews of tech industry essentials, crafted by me to empower your professional journey.
 
 ---
 #### The high levels topics are:
