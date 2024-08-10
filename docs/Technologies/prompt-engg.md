@@ -77,6 +77,36 @@ hide:
         - Prioritize which elements are important.
 
     #### 2. Specify format
+    - AI models tend to change output formats for the same prompt given multiple times if not specified.
+    - Hence, to keep the output consistent its important we specify the format.
+    - This helps us to plan as well as we can use the output of the prompt for another step.
+    - For eg. if we specify a json output we can use it to render front end.
+    - Format can be specified the following ways:
+        - One off: In the prompt text itself. Eg. Share a list in json format.
+        - Chain of prompts: Specify at the start and set as a persona. Eg. You are an assistant that responds in json.
+        - Setup in model parameters. Called grammars in llama models.
+    - Remove other aspects from the prompt that might clash with specified format.
+    - "The more layers of unrelated elements the more likely you are to get an unsuitable image."
+    - If there is a clash in the specify format principle and give direction principle lose the one less important.
+
+    ### 3. Provide examples
+    - AI models are few shot learners.
+    - The reliability of an output increases tremendously if a few examples are provided instead of none.
+    - The tradeoff is creativity as more examples help provide constrains to the ask which reduces the creative index.
+    - Providing 3-5 examples will give a very reliable output at the cost of creativity.
+    - Providing 1-3 examples has a positive effect almost always.
+    - Above 3 consider the effect it might have and provide diverse examples to cover edge cases.
+    - Rule of thumb. Provide direction first then provide examples.
+    - For image generation providing base image is considered as giving an example.
+
+    ### 4. Evaluate quality
+    - There is a need to evaluate quality when same prompt is relied on for production usecase.
+    - Having a simple thumbs-up/down system without adding much overhead to the optimization process.
+    - Another test is to see if examples are worth the additional cost as compared to giving no examples at all.
+    - Often while evaluating quality many elements of the prompt can be deemed superfluous or unnecessary.
+    - Removing them can shorten the prompt and improve latency resulting in overall scaling of operations.
+    - For images quality can be evaluated by permutation prompting.
+    - Provide a variety of input and do a side by side comparison / use classifiers for deciding the validity of each input.
 
 ## Introduction to LLMs for text generation
 
