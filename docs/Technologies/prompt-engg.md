@@ -108,6 +108,14 @@ hide:
     - For images quality can be evaluated by permutation prompting.
     - Provide a variety of input and do a side by side comparison / use classifiers for deciding the validity of each input.
 
+    ### 5. Divide labour
+    - Just like solving an engineering problem prompt engineering problems can also be solved by decomposing them into smaller steps.
+    - The outputs of these small steps can be combined to form the eventual answer.
+    - AIs are unable to judge the quality of a response while responding.
+    - However, once they give the response the AIs can be asked to evaluate the same.
+    - So adding an extra step to evaluate the responses is key.
+    - Later we can chain to provide details and even ask AI to use the details to generate further tasks like creating an image generation prompt.
+
 ## Introduction to LLMs for text generation
 
 ## Text Generation: standard practices
