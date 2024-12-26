@@ -10,30 +10,6 @@ hide:
 All the knowledge related to management topics.
 
 !!! info inline ""
-    ## PMBOK
-
-    ---
-    Project Management Body of Knowledge
-    
-    [Explore ↗](pmbok.md)
-
-!!! info inline ""
-    ## PMP
-
-    ---
-    Project Management Professional notes
-    
-    [Explore ↗](pmp-study.md)
-
-!!! info inline ""
-    ## Prince 2
-
-    ---
-    Complete knowledge on the Prince 2 framework
-    
-    [Explore ↗](prince-notes.md)
-
-!!! info inline ""
     ## Scrum
 
     ---
@@ -41,3 +17,10 @@ All the knowledge related to management topics.
     
     [Explore ↗](scrum.md)
 
+!!! info inline ""
+    ## SAFE
+
+    ---
+    Complete knowledge on the SAFE framework
+    
+    [Explore ↗](safe.md)
