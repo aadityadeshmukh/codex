@@ -18,6 +18,14 @@ hide:
 
     ---
     [Explore ↗](prompt-engg.md)
+
+!!! info inline ""
+    ### Power BI
+
+    ---
+    [Explore ↗](power-bi.md)
+
+
 !!! info inline ""
     ### Azure Essentials
     
