@@ -75,6 +75,34 @@ hide:
 
 ## Power BI ecosystem
 
+- Power BI is a collection of interralted tools and services that form a complete BI ecosystem.
+- It includes tools for modelling, analysis and visualization
+- The ecosystem can be broken down into following categories:
+    - Core - Power BI specific
+        - Power BI Desktop:
+            - Free, Windows based app that installs on a local computer
+            - Its primary tool to ingest, cleanse, transform data, combine into models
+            - Analyze and visualize using calculations, visualizations, and reports
+            - Once reports are created in Power BI desktop they are published to Power BI service
+        - Power BI service:
+            - Cloud-based SaaS online platform
+            - light report editing, sharing, collaborating, and viewing reports
+    - Core - non Power BI specific
+        - Data Query - Data connectivity and transformation
+        - DAX - programming language for Power BI
+        - On Premise data gateway - facilitate access from Power BI service to data sources
+        - SSAS - Ability to build models
+        - MS Appsource - Marketplace to find apps, add-ins and extensions to sotwares like Power BI
+    - Non-core - Power BI specific
+        - Report Server
+        - Embedded
+        - Mobile application
+        - Mixed reality
+    - Natively integrated MS tech
+        - Office 365, Excel, Microsoft Flow, Power Apps, Visio, Azure ML, Report builder
+    - Extended ecosystem
+        - Large ecosystem of 3rd party tools and add-ons
+
 ## Power BI Desktop
 
 ## Connecting and Shaping Data
