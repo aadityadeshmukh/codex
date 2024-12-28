@@ -1,0 +1,1114 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+      <link rel="icon" href="../../assets/images/favico.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.49">
+    
+    
+      
+        <title>AWS Basics - CODEX</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.6f8fc17f.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+  
+  
+    
+    
+      
+    
+    
+  
+    
+    
+      
+    
+    
+  
+    
+    
+      
+    
+    
+  
+  
+  <style>.md-tag.md-tag--html{--md-tag-icon:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--! Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="m0 32 34.9 395.8L191.5 480l157.6-52.2L384 32zm308.2 127.9H124.4l4.1 49.4h175.6l-13.6 148.4-97.9 27v.3h-1.1l-98.7-27.3-6-75.8h47.7L138 320l53.5 14.5 53.7-14.5 6-62.2H84.3L71.5 112.2h241.1z"/></svg>');}.md-tag.md-tag--js{--md-tag-icon:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M0 32v448h448V32zm243.8 349.4c0 43.6-25.6 63.5-62.9 63.5-33.7 0-53.2-17.4-63.2-38.5l34.3-20.7c6.6 11.7 12.6 21.6 27.1 21.6 13.8 0 22.6-5.4 22.6-26.5V237.7h42.1zm99.6 63.5c-39.1 0-64.4-18.6-76.7-43l34.3-19.8c9 14.7 20.8 25.6 41.5 25.6 17.4 0 28.6-8.7 28.6-20.8 0-14.4-11.4-19.5-30.7-28l-10.5-4.5c-30.4-12.9-50.5-29.2-50.5-63.5 0-31.6 24.1-55.6 61.6-55.6 26.8 0 46 9.3 59.8 33.7L368 290c-7.2-12.9-15-18-27.1-18-12.3 0-20.1 7.8-20.1 18 0 12.6 7.8 17.7 25.9 25.6l10.5 4.5c35.8 15.3 55.9 31 55.9 66.2 0 37.8-29.8 58.6-69.7 58.6"/></svg>');}.md-tag.md-tag--css{--md-tag-icon:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="m480 32-64 368-223.3 80L0 400l19.6-94.8h82l-8 40.6L210 390.2l134.1-44.4 18.8-97.1H29.5l16-82h333.7l10.5-52.7H56.3l16.3-82z"/></svg>');}</style>
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Space+Mono:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Space Mono";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="blue">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#aws-basics" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="CODEX" class="md-header__button md-logo" aria-label="CODEX" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            CODEX
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              AWS Basics
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="blue"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent="blue"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6m0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4M7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="CODEX" class="md-nav__button md-logo" aria-label="CODEX" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    CODEX
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="aws-basics">AWS Basics</h1>
+<h2 id="introduction">Introduction</h2>
+<ul>
+<li>Notes from the <a href="https://explore.skillbuilder.aws/learn/course/134/play/85854/aws-cloud-practitioner-essentials">AWS practitioner essentials learning</a> course ware from amazon.</li>
+<li>AWS is built on the client server model</li>
+<li>The client for example a web browser sends a request to the server for example a AWS EC2 cluster</li>
+<li>The server returns the information requested</li>
+<li>AWS works in a pay as you go model where you can add or remove resources as needed</li>
+</ul>
+<p><pre class="mermaid"><code>graph LR
+A[Client] --&gt; B[Server];
+B --&gt; A;</code></pre>
+- Formal definition: <em>Cloud computing is a <mark>on-demand delivery</mark> of <mark>IT resources</mark> over the <strong>internet</strong> with <mark>pay as you go</mark> pricing</em>
+- There are 3 main types of deployment models:</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:3"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Cloud</label><label for="__tabbed_1_2">OnPremise</label><label for="__tabbed_1_3">Hybrid</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<ul>
+<li>Existing applications are moved to cloud</li>
+<li>New applications are built in cloud</li>
+<li>Run all parts of the application in the cloud</li>
+</ul>
+</div>
+<div class="tabbed-block">
+<ul>
+<li>Use virtualization and other technologies with own data centers</li>
+<li>Also called private cloud</li>
+</ul>
+</div>
+<div class="tabbed-block">
+<ul>
+<li>Connect parts of current applications to cloud</li>
+<li>Needed sometimes for better maintenance of the applications on OnPremise</li>
+<li>Regulatory compliance could also be a factor</li>
+</ul>
+<p>Eg. batch processing automatin is in cloud but all other aspects are OnPremise</p>
+</div>
+</div>
+</div>
+<hr />
+<ul>
+<li>Benefits of cloud:<ul>
+<li>Variable costs over upfront costs</li>
+<li>No need to maintain own data centers</li>
+<li>Scale in and scale out based on demand. no guessing</li>
+<li>Build massive economies of scale. Aggregated use by multiple customers results in low pay as you go price</li>
+<li>speed and agility</li>
+<li>Global deployments in minutes</li>
+</ul>
+</li>
+</ul>
+<h2 id="compute">Compute</h2>
+<ul>
+<li>
+<p>EC2 - Elastic Compute Cloud:</p>
+<ul>
+<li>These are virtual servers which can be procured on demand instantly</li>
+<li>Amazon takes care of procuring, securing and enabling them on the internet</li>
+<li>Makes use of virtualization technology that helps spin up virtual servers</li>
+<li>A "Hypervisor" helps share resources of the host machine between virtual servers and isolating them</li>
+<li>This is also called multi-tenancy and is managed by AWS</li>
+<li>We can choose the following aspects when requesting EC2 instances:<ul>
+<li>OS</li>
+<li>Number of instances</li>
+<li>Applications that run on the server</li>
+<li>Networking preferences - public, private etc.</li>
+</ul>
+</li>
+<li>EC2 instances can be vertically scaled i.e. the capacity can be added if application is maxing out the server resources</li>
+</ul>
+</li>
+<li>
+<p>EC2 Instance types:</p>
+<ul>
+<li>Optimization is based on 3 main criterion:<ul>
+<li>Compute</li>
+<li>Memory</li>
+<li>Storage</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Optimized for</th>
+<th>Examples</th>
+<th>Key notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>General Purpose</td>
+<td>Balance between all aspects</td>
+<td>variety of workloads like app servers, game servers, S/M DBs</td>
+<td>useful when compute, memory and storage need is equivalent</td>
+</tr>
+<tr>
+<td>Compute Optimized</td>
+<td>high performance compute</td>
+<td>high performace web apps, dedicated game servers, batch processing</td>
+<td>Used in cases similar to general purpose but need  HPC</td>
+</tr>
+<tr>
+<td>Accelerated Compute</td>
+<td>Compute + Accelerator</td>
+<td>graphics processing, data pattern matching</td>
+<td>cases where CPU based compute does not meet requirements</td>
+</tr>
+<tr>
+<td>Memory Optimized</td>
+<td>Memory</td>
+<td>high performace databases</td>
+<td>Used when CPU processing needs large amount of data to be preloaded</td>
+</tr>
+<tr>
+<td>Storage Optmized</td>
+<td>Storage</td>
+<td>ditributed file systems, warehousing</td>
+<td>IOPS = I/O per second. Used when we need high IOPS</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Pricing:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Plan</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>On-Demand</td>
+<td>Useful for unpredictable workloads that cannot be interrupted</td>
+</tr>
+<tr>
+<td>Reserved Instances</td>
+<td>Two types standard and convertible. Can be bought in 1y or 3y terms. need to specify type, size, tenancy, os, availability zone</td>
+</tr>
+<tr>
+<td>Savings Plan</td>
+<td>hourly spend commitment to an instance type and region for 1y or 3y term. Saves 72% as compared to on-Demand</td>
+</tr>
+<tr>
+<td>Spot Instances</td>
+<td>Bid on available resources at AWS for upto 90% off but can be taken away with a 2 min notice</td>
+</tr>
+<tr>
+<td>Dedicated Instances</td>
+<td>Physical servers that are fully dedicated for ones use. Most expensive</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Scaling:<ul>
+<li>Scaling means starting out with the resources you need and designing your architecture to scale out or in based on demand</li>
+<li>Automatic scaling process is provided by <em>Amazon EC2 auto-scaling</em> service</li>
+<li>The service has 3 modes:<ul>
+<li>Dynamic scaling: Responds to changing demand</li>
+<li>Predictive scaling: Schedules resources based on predicted loads</li>
+<li>Hybrid: Both dynamic and predictive scaling can be used together for faster scaling</li>
+</ul>
+</li>
+<li>The scaling happens in a programatic way</li>
+<li>For auto scaling you need to specify:<ul>
+<li>Minimum requirements: Bare minimum required to run the application</li>
+<li>Desired requirements: Defaults to minimum if not specified</li>
+<li>Maximum requirements: Maximum in case of load</li>
+<li>In either case the charges are per use</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Load balancing:<ul>
+<li>If scaling solves the problem of overloading a single server load balancing solves the problem of distributing the load</li>
+<li>Elastic load balancing distributes the load based on least amount of outstanding requests</li>
+<li>The front end only refers to the Load balancer URL and hence decoupled from application servers and are unconcerned about scaling of compute resources</li>
+<li>ELB is auto scaled as well with no change to hourly rate</li>
+<li>ELB along with Auto scaling provide high availability and performance</li>
+</ul>
+</li>
+</ul>
+<p><img alt="Scaling concepts" src="../../assets/images/Technologies/scaling-options.png" /></p>
+<ul>
+<li>Messaging Queuing:<ul>
+<li>There are two main types of architectures:<ul>
+<li>Monolithic<ul>
+<li>Tightly coupled</li>
+<li>When one part fails other parts are impacted</li>
+</ul>
+</li>
+<li>Microservice based<ul>
+<li>Multiple independent components that talk to each other</li>
+<li>Loosely coupled</li>
+<li>Less prone to failures. Fault tolerant</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>The services that enable communication that in turn enables fault tolerant architectures are:<ul>
+<li>SNS - Simple notification service<ul>
+<li>Pub/Sub model</li>
+<li>One shot publishing a message, notification, http request to multiple subscribing applications</li>
+</ul>
+</li>
+<li>SQS - Simple Queuing service<ul>
+<li>A queue where messages are stored until the recieving application processes it</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Both of these applications do not require the recieving application to be available</li>
+</ul>
+</li>
+<li>
+<p>Other compute products:</p>
+<ul>
+<li>AWS Lambda</li>
+<li>AWS Elastic Container Service</li>
+<li>AWS Elastic Kubernetes service</li>
+<li>AWS Fargate</li>
+</ul>
+<p>In order to decide which one to consider use the below decision matrix:
+<img alt="Compute selection" src="../../assets/images/Technologies/compute-decision.png" /></p>
+</li>
+</ul>
+<h2 id="global-infra-and-reliability">Global Infra and Reliability</h2>
+<ul>
+<li>AWS ditributes its data centers accross the world and calls it "Regions"</li>
+<li>Each region has multiple data centers and they are all connected with fiber optic connectivity</li>
+<li>This is done to provide highly available and fault tolerant infrastructure</li>
+</ul>
+<h4 id="regions">Regions</h4>
+<ul>
+<li>There are 4 main criterion to consider while choosing a region:<ul>
+<li>Compliance</li>
+<li>Proximity</li>
+<li>Feature availability</li>
+<li>Pricing</li>
+</ul>
+</li>
+</ul>
+<h4 id="availability-zones">Availability Zones</h4>
+<ul>
+<li>Availability zones are data centers or collection of them physically isolated withing a region</li>
+<li>As a best practice we should have resources deployed in 2 AZs at any time to be fault tolerant</li>
+<li>Any AWS service that is tagged "Regionally scoped service" is automatically regionally highly available e.g. Load balancer</li>
+</ul>
+<h4 id="edge-locations">Edge locations</h4>
+<ul>
+<li>These are locations with cached copy of the application and its data to serve nearby customers</li>
+<li>This is basically a CDN and is called Amazon CloudFront</li>
+<li>The networking is done using Amazon DNS service Route53</li>
+<li>In case the customers need a local copy that is installed in their buildings then use AWS Outposts</li>
+</ul>
+<h4 id="how-to-provision-aws-resources">How to provision AWS resources</h4>
+<p>How to interact:</p>
+<ul>
+<li>"Management Console"<ul>
+<li>Browser based console to manually manage and monitor resources</li>
+</ul>
+</li>
+<li>"AWS CLI"<ul>
+<li>A command line utility to script AWS commands and automate the management</li>
+</ul>
+</li>
+<li>"SDKs"<ul>
+<li>Programming language specific development kits to automate the management</li>
+</ul>
+</li>
+</ul>
+<p>How to provision:
+    - Using the interaction tools
+    - Elastic beanstalk
+        - EC2 based tool
+        - Takes code and desired configuaration and inputs and builds the infrastructure
+        - Provides visibility as well
+    - AWS Cloud formation
+        - IaC tool
+        - Can be used with a host of services not just EC2
+        - Uses text based configuration files to build resources
+        - Less prone to error</p>
+<h2 id="networking">Networking</h2>
+<h4 id="virtual-private-cloud">Virtual Private Cloud</h4>
+<ul>
+<li>VPC is essentially a private network inside AWS</li>
+<li>Inside the VPC services can be arranged based on the requirements in buckets called subnets.</li>
+<li>There are 2 possible subnets:<ul>
+<li>Public </li>
+<li>Private</li>
+</ul>
+</li>
+<li>
+<p>Considering 3 possible scenarios based on requests:</p>
+<ul>
+<li>Public requests to AWS cloud via open internet<ul>
+<li>Use internet gateway</li>
+<li>E.g. Users requesting access to our site</li>
+</ul>
+</li>
+<li>Private requests to AWS cloud via VPN over open internet<ul>
+<li>Use virtual private gateway</li>
+<li>Data center connections, internal users contacting the network via a VPN</li>
+</ul>
+</li>
+<li>Private requests to AWS cloud via a dedicated network<ul>
+<li>Use AWS direct connect</li>
+<li>This reduces network costs and increases bandwidth</li>
+<li>Data center connections routed via direct connect locations and connecting via virtual private gateway</li>
+</ul>
+</li>
+</ul>
+<p><img alt="VPC with subnets" src="../../assets/images/Technologies/vpc.png" /></p>
+</li>
+</ul>
+<h4 id="network-acls-and-security-groups">Network ACLs and Security groups</h4>
+<ul>
+<li>The access to VPC is granted by gateways.</li>
+<li>But this only secures the perimeter</li>
+<li>The subnets inside the VPC are accessed via the network access lists (Network ACLs) of the gateway</li>
+<li>These are stateless firewalls which allow or deny access to the subnets based on a list</li>
+<li>The default ACL allows all inbound and outbound traffic</li>
+<li>Custom ACLs can be used to decide security on this level</li>
+<li>Once the packets are inside the subnet the EC2 instances need a security layer on their level as well</li>
+<li>This is called a Security group</li>
+<li>These are stateful systems that allow or deny packets to the EC2 instances</li>
+<li>Security groups are implicit deny which means only the allowed traffic is let in</li>
+</ul>
+<h4 id="global-networking">GLobal networking</h4>
+<ul>
+<li>When a customer tried to connect to say a company website it uses a DNS resolver</li>
+<li>The DNS resolver translates the request to an IP address and allows the connection to the website</li>
+<li>Amazon has Route 53 to provide DNS resolution</li>
+<li>It helps connect infrastructure inside and outside AWS as well</li>
+<li>It has certain strategies to achieve DNS resolution:<ul>
+<li>Geolocation based</li>
+<li>Geoproximity based</li>
+<li>Latency based</li>
+<li>Weighted round robin</li>
+</ul>
+</li>
+<li>Another service that provides Global networking is Amazon CloudFront which is a CDN</li>
+</ul>
+<h2 id="storage-and-databases">Storage and Databases</h2>
+<h4 id="block-storage">Block storage</h4>
+<ul>
+<li>EC2 instances have associated block storage but they are ephemeral and data is tied to EC2 lifecycle</li>
+<li>To solve this problem amazon provides EBS or Elastic block storage</li>
+<li>These can be provisioned as per size needs and attached to EC2 and the data persists</li>
+<li>EBS allows to take regular snapshots of data so that disaster recovery is possible</li>
+<li>These backups are incremental i.e. only the data that is changed is backed up</li>
+<li>Stores data in an Availability zone</li>
+</ul>
+<h4 id="simple-storage-service">Simple Storage Service</h4>
+<ul>
+<li>Amazon stores the files as objects</li>
+<li>An object is the file itself, metadata and a key</li>
+<li>These objects are stored inside buckets (think folders)</li>
+<li>Maximum size of the object is 5TB</li>
+<li>Durability: 99.99999999%</li>
+<li>The objects can be stored in multiple tiers namely:<ul>
+<li>S3 standard</li>
+<li>S3 Infrequent Access</li>
+<li>S3 one zone Infrequest access</li>
+<li>S3 Intelligent tiering</li>
+<li>S3 Glacier Instant retrieval</li>
+<li>S3 Glacier Flexible retrival</li>
+<li>S3 Deep archive</li>
+<li>S3 outposts</li>
+</ul>
+</li>
+<li>Amazon also provides lifecycle policies that can control the tiers based on usage and number of days for example</li>
+</ul>
+<h4 id="ebs-vs-s3">EBS vs S3</h4>
+<ul>
+<li>If you have a single file where you need to do micro edits choose EBS</li>
+<li>If you have large files that need to be dealt with as discrete objects then use S3</li>
+</ul>
+<h4 id="elastic-file-system">Elastic File System</h4>
+<ul>
+<li>True managed Linux file system</li>
+<li>The system supports multiple read and write connections</li>
+<li>Scales automatically</li>
+<li>Regionally scoped. EBS is AZ scoped</li>
+<li>On-premises can access data using Amazon Direct connect</li>
+</ul>
+<h4 id="relational-databases">Relational databases</h4>
+<ul>
+<li>AWS supports relational databases to be installed on EC2 servers</li>
+<li>Supported databases:<ul>
+<li>PostgreSQL</li>
+<li>Oracle</li>
+<li>MySQL</li>
+<li>MariaDB</li>
+</ul>
+</li>
+<li>This is typically called lift-and-shift</li>
+<li>That way all of the current database activities and variables are available from the cloud</li>
+<li>It automates tasks such as hardware provisioning, database setup, patching, and backups.</li>
+<li>However, if we need a more managed approach then we can use Amazon Relational database System or RDS</li>
+<li>Amazon aurora is fully managed professional database system in the cloud</li>
+<li>It supports PostgreSQL and MySQL and provides the service at 1/10<sup>th</sup> the cost of other offerings</li>
+<li>It replicates six copies of your data across three Availability Zones and continuously backs up your data to Amazon S3.</li>
+</ul>
+<h4 id="amazon-dyanmodb">Amazon DyanmoDB</h4>
+<ul>
+<li>Dynamo DB is a fully managed serverless (no need to provision, patch or manage servers) database</li>
+<li>It is a non-relational and no-sql database specifically a key-value database</li>
+<li>It stores data as items and attributes</li>
+<li>It also has millisecond response times</li>
+<li>It is purpose built i.e. it only suits a certain work loads</li>
+</ul>
+<h4 id="amazon-redshift">Amazon Redshift</h4>
+<ul>
+<li>Managed data warehousing solution</li>
+<li>Warehousing is used when we try to answer the question "what happened"</li>
+<li>Used for big data analytics and BI analytics workflows</li>
+</ul>
+<h4 id="amazon-data-migration-service">Amazon Data migration service</h4>
+<ul>
+<li>Used when:<ul>
+<li>migrating onPremise data to cloud</li>
+<li>production to dev and test database</li>
+<li>consolidating databases</li>
+<li>continuous replication</li>
+</ul>
+</li>
+<li>Can be used to move data from different databases as well</li>
+<li>For example OP MySQL can be migrated to Cloud PostgreSQL</li>
+<li>The source database does not stop during migration and can still be accessed</li>
+</ul>
+<h4 id="additional-databases">Additional databases</h4>
+<table>
+<thead>
+<tr>
+<th>Service</th>
+<th>Type</th>
+<th>Use</th>
+<th>Remarks</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DocumentDB</td>
+<td>Database</td>
+<td>User profiles etc</td>
+<td>MongoDB workloads</td>
+</tr>
+<tr>
+<td>Neptune</td>
+<td>Database</td>
+<td>Social network, fraud detection</td>
+<td>Graph database</td>
+</tr>
+<tr>
+<td>Quantum Ledger</td>
+<td>Database</td>
+<td>compliance Audits</td>
+<td>Immutable database entries</td>
+</tr>
+<tr>
+<td>Elasticache</td>
+<td>Accelerator</td>
+<td>comes in redis and memcached flavours</td>
+<td>improves fetch from databases</td>
+</tr>
+<tr>
+<td>DynamoDB accelerator</td>
+<td>Accelerator</td>
+<td></td>
+<td>improves DynamoDB fetches</td>
+</tr>
+</tbody>
+</table>
+<h2 id="security">Security</h2>
+<h4 id="shared-responsibility-model">Shared responsibility model</h4>
+<ul>
+<li>Security of the cloud - Owned by AWS<ul>
+<li>Physical infrastructure</li>
+<li>Servers</li>
+<li>Hypervisors</li>
+</ul>
+</li>
+<li>Security in the cloud - Owned by the customers<ul>
+<li>OS</li>
+<li>Applications</li>
+<li>Data</li>
+</ul>
+</li>
+</ul>
+<h4 id="identity-access-management">Identity &amp; Access Management</h4>
+<ul>
+<li>AWS provides a variety of options to control the access to the platform and its services<ul>
+<li>Root User:<ul>
+<li>Has access to everything</li>
+<li>Best practice is to add MFA as soon as 1<sup>st</sup> login</li>
+<li>Create new users based on tasks and assign permissions and use the created users to do tasks</li>
+</ul>
+</li>
+<li>Users, User groups, policies:<ul>
+<li>Root can create users and add them to user groups</li>
+<li>The activities they can perform are governed by policies</li>
+<li>Policies define the activities users or user groups can perform, resources they can access </li>
+</ul>
+</li>
+<li>Roles:<ul>
+<li>Allows users to assume temporary responsibility and do tasks</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<pre class="mermaid"><code>graph TD
+A[root user] --&gt;|policies| B[user 1];
+A --&gt;|policies| C[user 2];
+A --&gt;|policies| D[user group 1];
+D --&gt;|inherited policies| E[user 4];
+D --&gt;|inherited policies| F[user 5];
+A --&gt;|temporary responsibility| G[user 5 role 1]</code></pre>
+<h4 id="aws-organizations">AWS Organizations</h4>
+<ul>
+<li>AWS organizations is a service that allows grouping and managing AWS accounts </li>
+<li>It allows to set SCPs (service control policies) on individual accounts and group of accounts (Organizational units)</li>
+</ul>
+<pre class="mermaid"><code>graph TD
+A[AWS Organization] --&gt;|SCPs| B[Account 1];
+A --&gt;|SCPs| C[Account 2];
+A --&gt;|SCPs| D[Organization Unit];
+D --&gt;|inherited SCPs| E[Account 3];
+D --&gt;|inherited SCPs| F[Account 4];</code></pre>
+<h4 id="compliance">Compliance</h4>
+<ul>
+<li>AWS has a shared responsibility model</li>
+<li>It completes part of the compliance requirements on its own</li>
+<li>The services and data built on top of AWS the compliance needs to be done by the company</li>
+<li>They can use the compliance functionality themselves or use the exisitng features in AWS</li>
+<li>All compliance reports can be accessed via "AWS Artifacts"</li>
+<li>Compliance center is a one stop solution to get all information related to compliance requirements for various use cases</li>
+</ul>
+<h4 id="ddos">DDos</h4>
+<ul>
+<li>A well architected system is already capable of handling some types of DDos attacks</li>
+<li>For example, security groups and ALB can take care of UDP flood and SLow loris type attacks</li>
+<li>AWS Shield is a service that can be used to protect against sophesticated attacks</li>
+<li>It has 2 modes:<ul>
+<li>Standard</li>
+<li>Advanced</li>
+</ul>
+</li>
+<li>It has a WAF web application firewall that takes care of the bad actor signatures and has ML capabilities</li>
+</ul>
+<h4 id="additional-services">Additional services</h4>
+<ul>
+<li>KMS - Key management systems that provides encryption at rest and transit</li>
+<li>Inspector - Regular security scans</li>
+<li>Guard duty - Proactive threat detection with continuous monitoring</li>
+</ul>
+<h2 id="monitoring-and-analytics">Monitoring and Analytics</h2>
+<h4 id="cloudwatch">CloudWatch</h4>
+<ul>
+<li>Amazon cloudwatch collects metrics from host of services and helps show them in one place</li>
+<li>It allows to set alarms based on data points to trigger actions</li>
+</ul>
+<h4 id="cloudtrail">Cloudtrail</h4>
+<ul>
+<li>Making changes to the system in AWS is API driven</li>
+<li>Cloudtrail helps to identify changes based on these API calls</li>
+<li>It records who, what, when, how aspects of the change for effective audit</li>
+<li>CloudWatch Insights is a service we can use to detect unusual activity and get alerts</li>
+</ul>
+<h4 id="trusted-advisor">Trusted Advisor</h4>
+<ul>
+<li>Web service that provides information based on best practices of using AWS</li>
+<li>It provides information on 5 pillars:<ul>
+<li>Cost Optimization</li>
+<li>Performance</li>
+<li>Security</li>
+<li>Fault tolerance</li>
+<li>Service limits</li>
+</ul>
+</li>
+<li>Useful to avoid high costs and optimize for best use</li>
+</ul>
+<h2 id="pricing-and-support">Pricing and Support</h2>
+<ul>
+<li>AWS offers free tier which are either forever free, 12 month free or limited trial free types</li>
+<li>Pricing model is either:<ul>
+<li>Pay per use</li>
+<li>Reduced pricing for commitment</li>
+<li>Redeuced pricing for volume based usage</li>
+</ul>
+</li>
+<li>AWS has a billing dashboard where you can view MTD view of the resource usage</li>
+<li>You can also check Billing info</li>
+<li>AWS offers consolidated billing for users of AWS Organizations</li>
+<li>They can get simplified billing, share premium savings features withing accounts and the service is free</li>
+<li>AWS provides a way to create budgets based on actual or forecasted usage and set alerts</li>
+<li>Its called AWS Budgets</li>
+<li>AWS cost explorer lets you analyze the past data for cost.</li>
+<li>You can create a dashboard and filter by tags to analyze the data</li>
+<li>AWS offers support in the following tiers:<ul>
+<li>Basic - Free - limited trusted advisor checks </li>
+<li>Developer - Basic + best practice guidance etc.</li>
+<li>Business - This and above includes AWS Trusted advisor</li>
+<li>Business On-Ramp - This and above includes TAM (Technical Account Manager)</li>
+<li>Business Enterprise</li>
+</ul>
+</li>
+<li>AWS Marketplace lets you search for tools and apps built on AWS for 1 click solutions</li>
+</ul>
+<h2 id="migration-and-innovation">Migration and Innovation</h2>
+<h4 id="aws-cloud-adoption-framework">AWS Cloud Adoption Framework</h4>
+<ul>
+<li>AWS professional services team has created a framework that helps people migrate to the cloud</li>
+<li>It has 6 pillars and results into an action plan
+<pre class="mermaid"><code>graph LR    
+A[Cloud Adoption Framework] --&gt; B[Business];
+A --&gt; C[People];
+A --&gt; D[Governance];
+A --&gt; E[Platform];
+A --&gt; F[Security];
+A --&gt; G[Operations];
+B --&gt; H[Business, Finance managers];
+C --&gt; I[HR, Staffing];
+D --&gt; J[CIO, program managers, enterprise architects]
+E --&gt; K[CTO, Solution architects]
+F --&gt; L[CISO, IT Security Managers]
+G --&gt; M[IT Ops managers]</code></pre></li>
+</ul>
+<h4 id="6-rs-of-migration">6 Rs of Migration</h4>
+<pre class="mermaid"><code>graph LR
+A[6 Rs] --&gt; |Lift and shift| B[Rehosting]
+A --&gt; |Lift tinker and shift| C[Replatforming]
+A --&gt; |Remove apps not needed| D[Retire]
+A --&gt; |Keep for a limited time| E[Retain]
+A --&gt; |New infrastructure for new possibilities| F[Repurchase]
+A --&gt; |Changing code to achieve new things|G[Refactor]</code></pre>
+<h4 id="snow-family">Snow Family</h4>
+<ul>
+<li>Family of physical devices used to transport data from OP to on cloud</li>
+<li>The devices are:<ul>
+<li>Snow Cone<ul>
+<li>Upto 14TB of storage</li>
+</ul>
+</li>
+<li>Snow Ball<ul>
+<li>Storage optimized<ul>
+<li>80TB of data</li>
+<li>40cpus</li>
+</ul>
+</li>
+<li>Compute optimized<ul>
+<li>80TB</li>
+<li>104 vcpus</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Snow Mobile<ul>
+<li>Exa bite container truck</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="innovation">Innovation</h4>
+<ul>
+<li>Serverless<ul>
+<li>AWS Lambda</li>
+</ul>
+</li>
+<li>Machine Learning<ul>
+<li>AWS SageMAker</li>
+</ul>
+</li>
+<li>AI<ul>
+<li>Augmented AI</li>
+<li>Code Whisperer</li>
+</ul>
+</li>
+</ul>
+<h2 id="cloud-journey">Cloud Journey</h2>
+<h4 id="aws-well-architected-framework">AWS Well Architected Framework</h4>
+<ul>
+<li>The framework has 6 main pillars</li>
+<li>It is a collection of best practices that helps design or evaluate current AWS systems</li>
+<li>The framework either needs to be evaluated by a Solution architect or needs to be evaluated using a self service tool</li>
+</ul>
+<pre class="mermaid"><code>graph TD
+A[AWS WAF] --&gt; B[Operational Excellence]
+A --&gt; C[Security]
+A --&gt; D[Cost Optimization]
+A --&gt; E[Reliability]
+A --&gt; F[Performance Efficiency]
+A --&gt; G[Sustainability]</code></pre>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Made with ❤ by Aditya Deshmukh
+    </div>
+  
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://twitter.com/scr33nslaver" target="_blank" rel="noopener" title="twitter.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="mailto:aadityadeshmukh@duck.com" target="_blank" rel="noopener" title="" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M498.1 5.6c10.1 7 15.4 19.1 13.5 31.2l-64 416c-1.5 9.7-7.4 18.2-16 23s-18.9 5.4-28 1.6L284 427.7l-68.5 74.1c-8.9 9.7-22.9 12.9-35.2 8.1S160 493.2 160 480v-83.6c0-4 1.5-7.8 4.2-10.8l167.6-182.8c5.8-6.3 5.6-16-.4-22s-15.7-6.4-22-.7L106 360.8l-88.3-44.2C7.1 311.3.3 300.7 0 288.9s5.9-22.8 16.1-28.7l448-256c10.7-6.1 23.9-5.5 34 1.4"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://peerlist.io/aditya" target="_blank" rel="noopener" title="peerlist.io" class="md-social__link">
+      <svg width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M28 0C6.22222 0 0 6.22222 0 28C0 49.7778 6.23778 56 28 56C49.7622 56 56 49.7778 56 28C56 6.22222 49.7622 0 28 0Z" fill="white"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M7.24755 7.24755C3.5875 10.9076 2 17.153 2 28C2 38.8461 3.59108 45.0918 7.25306 48.7521C10.9153 52.4127 17.1612 54 28 54C38.8388 54 45.0847 52.4127 48.7469 48.7521C52.4089 45.0918 54 38.8461 54 28C54 17.1539 52.4089 10.9082 48.7469 7.24787C45.0847 3.58733 38.8388 2 28 2C17.153 2 10.9076 3.5875 7.24755 7.24755ZM0 28C0 6.22222 6.22222 0 28 0C49.7622 0 56 6.22222 56 28C56 49.7778 49.7622 56 28 56C6.23778 56 0 49.7778 0 28Z" fill="#24292E"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M27.0769 13H15V47H24.3846V39.8889H27.0769C34.7305 39.8889 41 33.9048 41 26.4444C41 18.984 34.7305 13 27.0769 13ZM24.3846 30.7778V22.1111H27.0769C29.6194 22.1111 31.6154 24.0864 31.6154 26.4444C31.6154 28.8024 29.6194 30.7778 27.0769 30.7778H24.3846Z" fill="#24292E"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M18 12H29.0769C36.2141 12 42 17.5716 42 24.4444C42 31.3173 36.2141 36.8889 29.0769 36.8889H25.3846V44H18V12ZM25.3846 29.7778H29.0769C32.1357 29.7778 34.6154 27.39 34.6154 24.4444C34.6154 21.4989 32.1357 19.1111 29.0769 19.1111H25.3846V29.7778Z" fill="white"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M17 11H29.0769C36.7305 11 43 16.984 43 24.4444C43 31.9048 36.7305 37.8889 29.0769 37.8889H26.3846V45H17V11ZM19 13V43H24.3846V35.8889H29.0769C35.6978 35.8889 41 30.7298 41 24.4444C41 18.1591 35.6978 13 29.0769 13H19ZM24.3846 18.1111H29.0769C32.6521 18.1111 35.6154 20.9114 35.6154 24.4444C35.6154 27.9775 32.6521 30.7778 29.0769 30.7778H24.3846V18.1111ZM26.3846 20.1111V28.7778H29.0769C31.6194 28.7778 33.6154 26.8024 33.6154 24.4444C33.6154 22.0864 31.6194 20.1111 29.0769 20.1111H26.3846Z" fill="#24292E"/>
+</svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.instant.prefetch", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.expand", "navigation.path", "navigation.indexes", "toc.follow", "toc.integrate", "navigation.top", "search.suggest", "search.highlight", "search.share", "navigation.footer", "content.code.copy"], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "tags": {"CSS": "css", "HTML5": "html", "JavaScript": "js"}, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.88dd0f4e.min.js"></script>
+      
+    
+  </body>
+</html>
