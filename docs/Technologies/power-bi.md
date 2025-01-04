@@ -103,6 +103,21 @@ hide:
     - Extended ecosystem
         - Large ecosystem of 3rd party tools and add-ons
 
+```mermaid
+graph LR
+A[Power BI] --> B[Power BI Desktop];
+A --> C[Power BI Services];
+B --> D[Getting Data];
+B --> E[Creating a data model];
+B --> F[Analyzing Data];
+B --> G[Creating & Publishing reports];
+C --> H[View and Edit reports];
+C --> I[Creating Dashboards];
+C --> J[Sharing and collaborating];
+C --> K[Accessing and creating apps];
+C --> L[Refresh data]
+```
+
 ## Power BI Desktop
 
 ## Connecting and Shaping Data
