@@ -120,6 +120,7 @@ C --> L[Refresh data]
 
 ## Power BI Desktop
 
+
 ## Connecting and Shaping Data
 
 ## Data Models and Calculations
