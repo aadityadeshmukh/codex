@@ -10,3 +10,9 @@ hide:
     ---
     [Explore ↗](scrum-fw.md)
 
+!!! info inline ""
+    ## Facilitation
+    
+    ---
+    [Explore ↗](facilitating-scrum.md)
+
